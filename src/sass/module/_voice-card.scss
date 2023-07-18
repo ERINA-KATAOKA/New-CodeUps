@@ -1,0 +1,90 @@
+@use "global" as *;
+
+.voice-card {
+  max-width: rem(520);
+  width: 100%;
+  padding: rem(15) rem(16) rem(24) rem(16);
+  background-color: $white;
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
+
+
+  @include mq("md") {
+		padding: rem(24);
+  }
+}
+
+.voice-card__title-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.voice-caed__category {
+  @include mq("md") {
+		display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.voice-card__aege {
+  font-size: rem(12);
+  line-height: (18 /12);
+}
+
+.voice-card__label {
+  display: inline-block;
+  padding: rem(4) rem(12);
+  font-size: rem(12);
+  line-height: (22 / 12);
+  color: $accent-color;
+  border: rem(1) solid $accent-color;
+
+  @include mq("md") {
+    padding: rem(6) rem(16);
+  }
+}
+
+.voice-card__title {
+  margin-top: rem(4);
+  padding-bottom: rem(4);
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1.5;
+  border-bottom: rem(1) solid $accent-color;
+
+  @include mq("md") {
+		margin-top: rem(8);
+    font-size: rem(24);
+  }
+}
+
+.voice-card__img {
+  max-width: rem(151);
+  width: 100%;
+  margin-left: rem(13);
+
+  @include mq("md") {
+    max-width: rem(180);
+		margin-left: rem(16);
+  }
+}
+
+.voice-card__img img {
+  aspect-ratio: 151 / 117;
+  object-fit: cover;
+
+  @include mq("md") {
+    aspect-ratio: 180 / 140;
+  }
+}
+
+.voice-card__text {
+  margin-top: rem(15);
+  font-size: rem(16);
+  line-height: (24 / 16);
+
+  @include mq("md") {
+		margin-top: rem(40);
+  }
+}

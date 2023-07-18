@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.blog-card {
+  max-width: rem(333);
+  width: 100%;
+  padding: rem(16) rem(16) rem(24) rem(16);
+  background-color: $white;
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25)
+}
+
+.blog-card__img {
+  width: 100%;
+}
+
+.blog-card__img img {
+  aspect-ratio: 301 / 201;
+  object-fit: cover;
+}
+
+.blog-card__body {
+  margin-top: rem(24);
+}
+
+.blog-card__date {
+  font-size: rem(12);
+  font-family: $gotu-font;
+  line-height: (18 / 12);
+}
+
+.blog-card__title {
+  padding-bottom: rem(4);
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: (24 / 16);
+  border-bottom: rem(1) solid $accent-color;
+}
+
+.blog-card__text {
+  margin-top: rem(16);
+  font-size: rem(16);
+  line-height: (24 / 16);
+}
