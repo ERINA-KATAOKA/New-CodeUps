@@ -31,27 +31,36 @@
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 500;
+
+  @include mq("md") {
+    top: 56%;
+  }
 }
 
 .mv__title {
   font-size: rem(40);
   font-family: $lato-font;
   font-weight: $regular;
-  line-height: 1.5;
-  letter-spacing: 0.54em;
-  text-indent: 0.54em;
+  line-height: 1;
+  letter-spacing: 0.53em;
+  text-indent: 0.53em;
   text-transform: uppercase;
   color: $white;
 
   @include mq("md") {
-    font-size: rem(100);
+    font-size: rem(80);
   }
 }
 
 .mv__subtitle {
+  margin-top: rem(11);
   font-size: rem(20);
   font-family: $gotu-font;
   font-weight: $regular;
-  line-height: 1.5;
+  line-height: 1;
   color: $white;
+
+  @include mq("md") {
+    margin-top: rem(18);
+  }
 }
