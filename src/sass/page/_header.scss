@@ -14,6 +14,11 @@
   }
 }
 
+.header.change-color {
+  background-color: $bg-gray;
+  transition: background-color 0.4s ease-out;
+}
+
 .header__inner {
   display: flex;
   align-items: center;

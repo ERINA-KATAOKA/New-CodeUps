@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -32,7 +33,7 @@
 </head>
 <body>
   <header>
-    <div class="header">
+    <div class="header js-header">
       <div class="header__inner">
         <a href="#" class="header__name">
           <img src="./assets/images/common/site-name.svg" alt="CodeUps">
@@ -149,6 +150,42 @@
   </header>
 
   <main>
+    <div class="mv">
+      <div class="mv__inner">
+        <div class="swiper mv__swiper js-slider1">
+          <div class="swiper-wrapper mv__swiper-wrapper">
+            <div class="swiper-slide mv__swiper-slide">
+              <picture>
+                <source srcset="./assets/images/common/mv-sp1.jpg" media="(max-width:767px)">
+                <img src="./assets/images/common/mv-pc1.jpg" alt="海底をカメが泳いでいる様子">
+              </picture>
+            </div>
+            <div class="swiper-slide mv__swiper-slide">
+              <picture>
+                <source srcset="./assets/images/common/mv-sp2.jpg" media="(max-width:767px)">
+                <img src="./assets/images/common/mv-pc2.jpg" alt="2人のダイバーが海の中で泳いでいるカメを撮影している様子">
+              </picture>
+            </div>
+            <div class="swiper-slide mv__swiper-slide">
+              <picture>
+                <source srcset="./assets/images/common/mv-sp3.jpg" media="(max-width:767px)">
+                <img src="./assets/images/common/mv-pc3.jpg" alt="ボートが浮かぶ海の様子">
+              </picture>
+            </div>
+            <div class="swiper-slide mv__swiper-slide">
+              <picture>
+                <source srcset="./assets/images/common/mv-sp4.jpg" media="(max-width:767px)">
+                <img src="./assets/images/common/mv-pc4.jpg" alt="快晴の青い空と綺麗な海の様子">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="mv__title-wrapper">
+          <h1 class="mv__title">diving</h1>
+          <p class="mv__subtitle">into&nbsp;the&nbsp;ocean</p>
+        </div>
+      </div>
+    </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- section header -->
     <div class="campaign__heading section-heading">
@@ -301,7 +338,7 @@
             </div>
             <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
           </div>
-          <div class="voice-card__img slide-animation">
+          <div class="voice-card__img slide-animation js-slide-animation">
             <img class="slide-animation__img" src="./assets/images/common/voice1.jpg" alt="麦わら帽子をかぶった笑顔の20代女性の様子">
           </div>
         </div>
@@ -316,7 +353,7 @@
             </div>
             <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
           </div>
-          <div class="voice-card__img slide-animation">
+          <div class="voice-card__img slide-animation js-slide-animation">
             <img class="slide-animation__img" src="./assets/images/common/voice2.jpg" alt="右手親指を立ててグッドパーズをしている20代男性の様子">
           </div>
         </div>

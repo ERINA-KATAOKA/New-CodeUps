@@ -1,16 +1,37 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
+// ヘッダー背景変更
+$(window).on('scroll', function () {
+  if ($('.mv').height() < $(this).scrollTop()) {
+      $('.js-header').addClass('change-color');
+} else {
+      $('.js-header').removeClass('change-color');
+}
+});
+
+
   // ハンバーガーメニュー
 $(".js-hamburger,.js-drawer").click(function () {
   $(".js-hamburger").toggleClass("is-active");
   $(".js-drawer").fadeToggle();
 });
 
+//Slider1
+var slider1 = new Swiper ('.js-slider1', {
+  loop: true,
+  effect: "fade",
+  speed: 3000,
+  allowTouchMove: false,
+  autoplay: {
+    delay: 3000,
+  },
+});
+
 
   // 画像のスライドアニメーション
   //要素の取得とスピードの設定
-  var box = $('.slide-animation'),
+  var box = $('.js-slide-animation'),
   speed = 700;
 
   //.slide-animationの付いた全ての要素に対して下記の処理を行う
