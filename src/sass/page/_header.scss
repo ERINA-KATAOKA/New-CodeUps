@@ -5,5 +5,107 @@
   top: 0;
   left: 0;
   width: 100%;
+  height: rem(80);
+  z-index: 1000;
+  background-color: rgba($color: #0D2936, $alpha: 0.68);
 
+  @include mq("md") {
+		height: rem(90);
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: inherit;
+  padding-right: rem(15);
+  padding-left: rem(15);
+
+  @include mq("md") {
+    padding-right: rem(20);
+    padding-left: rem(40);
+  }
+}
+
+.header__name {
+  max-width: rem(102);
+  width: 100%;
+  position: relative;
+  z-index: 9999;
+
+  @include mq("md") {
+    max-width: rem(133);
+  }
+}
+
+.header__pc-nav {
+  height: inherit;
+}
+
+.header__nav-items {
+  display: flex;
+  height: inherit;
+}
+
+.header__nav-item {
+  height: inherit;
+  text-align: center;
+}
+
+.header__nav-link {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding-right: min((20 / 1440)*100vw,rem(20));
+  padding-left: min((20 / 1440)*100vw,rem(20));
+  cursor: pointer;
+}
+
+.header__nav-container {
+  position: relative;
+}
+
+.header__nav-container::after {
+  position: absolute;
+  content: "";
+  bottom: rem(-5);
+  left: 0;
+  width: 100%;
+  height: rem(1);
+  background-color: $white;
+  transition: all .3s;
+  transform: scale(0, 1);
+  transform-origin: center top;
+}
+
+@media(hover: hover) {
+  .header__nav-link:hover .header__nav-container::after {
+    transform: scale(1, 1);
+  }
+}
+
+.header__nav-title {
+  font-size: rem(18);
+  font-family: $gotu-font;
+  line-height: 1;
+  color: $white;
+  text-transform: capitalize;
+}
+
+.header__nav-title.header__nav-title--uppercase {
+  text-transform: uppercase;
+}
+
+.header__nav-title span {
+  display: inline-block;
+  text-transform: lowercase;
+}
+
+.header__nav-subtitle {
+  margin-top: rem(4);
+  font-size: rem(10);
+  line-height: (15 / 10);
+  color: $white;
 }

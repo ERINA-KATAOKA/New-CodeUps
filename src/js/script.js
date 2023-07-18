@@ -1,6 +1,12 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
+  // ハンバーガーメニュー
+$(".js-hamburger,.js-drawer").click(function () {
+  $(".js-hamburger").toggleClass("is-active");
+  $(".js-drawer").fadeToggle();
+});
+
   // 画像のスライドアニメーション
   //要素の取得とスピードの設定
   var box = $('.slide-animation'),

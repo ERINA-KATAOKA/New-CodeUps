@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.drawer {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $accent-color;
+  z-index: 5000;
+}
+
+.drawer__inner {
+  padding-right: rem(15);
+  padding-left: rem(15);
+}
+
+.drawer__wrapper {
+  display: flex;
+
+  margin-top: rem(92);
+}
+
+.drawer__right {
+  margin-left: rem(7);
+}
+
+.drawer__title {
+  position: relative;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: (18 / 16);
+  color: $white;
+}
+
+.drawer__title::before {
+  position: absolute;
+  content: "";
+  top: rem(12);
+  left: 0;
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/nav-point.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.drawer__item {
+  font-size: rem(16);
+  line-height: (18 / 16);
+  color: $white;
+}
+
+.drawer__title a,
+.drawer__item a {
+  display: inline-block;
+  width: 100%;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
+  padding-left: rem(22);
+}
+
+.drawer__title:not(:first-child) {
+  margin-top: rem(16);
+}
