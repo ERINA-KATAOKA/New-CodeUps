@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .footer {
+  position: relative;
   width: 100%;
   background-color: $accent-color;
   padding-top: rem(48);

@@ -7,6 +7,7 @@ $(".js-hamburger,.js-drawer").click(function () {
   $(".js-drawer").fadeToggle();
 });
 
+
   // 画像のスライドアニメーション
   //要素の取得とスピードの設定
   var box = $('.slide-animation'),
@@ -36,6 +37,41 @@ $(".js-hamburger,.js-drawer").click(function () {
         })
         counter = 1;
       }
+    });
+  });
+
+
+  //  ページトップボタン
+  $(function() {
+    // 変数にクラスを入れる
+    var btn = $('.js-page-top');
+
+    //スクロールしてページトップから100に達したらボタンを表示
+    $(window).on('load scroll', function(){
+      if($(this).scrollTop() > 100) {
+        btn.addClass('is-active');
+      }else{
+        btn.removeClass('is-active');
+      }
+    });
+
+    //フッターの手前でボタンを止める
+    $(window).on('load scroll', function(){
+      var height = $(document).height(), //ドキュメントの高さ
+          position = window.innerHeight + $(window).scrollTop(), //ページトップから現在地までの高さ
+          footer = $('footer').height(); //フッターの高さ
+      if ( height - position  < footer ){
+        btn.addClass('is-absolute');
+      } else {
+        btn.removeClass('is-absolute');
+      }
+    });
+
+    //スクロールしてトップへ戻る
+    btn.on('click',function () {
+      $('body,html').animate({
+        scrollTop: 0
+      });
     });
   });
 

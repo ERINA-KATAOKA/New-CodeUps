@@ -1,0 +1,37 @@
+@use "global" as *;
+
+.page-top {
+  position: fixed;
+  bottom: rem(16);
+  right: rem(15);
+  opacity: 0;
+  transition: opacity .3s;
+
+  @include mq("md") {
+    bottom: rem(20);
+    right: rem(20);
+  }
+}
+
+.page-top img {
+  width: rem(48);
+  height: rem(48);
+
+  @include mq("md") {
+    width: rem(80);
+    height: rem(80);
+  }
+}
+
+.page-top.is-active {
+  opacity: 1;
+}
+
+.page-top.is-absolute {
+  position: absolute;
+  top: rem(-68);
+
+  @include mq("md") {
+    top: rem(-100);
+  }
+}
