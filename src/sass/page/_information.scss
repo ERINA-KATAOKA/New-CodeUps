@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.information {
+  padding-top: rem(84);
+  padding-bottom: rem(84);
+  background-color: $bg-green;
+
+  @include mq("md") {
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+  }
+}
+
+.information__body {
+  width: 100%;
+  margin-top: rem(28);
+
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+		margin-top: rem(40);
+  }
+}
+
+.information__img {
+  @include mq("md") {
+		width: 50%;
+  }
+}
+
+.information__img img {
+  aspect-ratio: 345 / 227;
+  object-fit: cover;
+
+  @include mq("md") {
+		aspect-ratio: 540 / 356;
+  }
+}
+
+.information__content-wrap {
+  margin-top: rem(25);
+
+  @include mq("md") {
+    width: 50%;
+		margin-top: 0;
+    padding-left: rem(48);
+  }
+}
+
+.information__title {
+  padding-bottom: rem(4);
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: (24 / 20);
+  border-bottom: rem(1) solid $accent-color;
+
+  @include mq("md") {
+    padding-bottom: rem(7);
+		font-size: rem(24);
+    line-height: 1;
+  }
+}
+
+.information__text {
+  margin-top: rem(7);
+  font-size: rem(16);
+  line-height: (24 / 16);
+
+  @include mq("md") {
+		margin-top: rem(8);
+  }
+}
+
+.information__button {
+  margin-top: rem(39);
+
+  @include mq("md") {
+		margin-top: rem(40);
+  }
+}

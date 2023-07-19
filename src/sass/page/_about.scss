@@ -2,13 +2,12 @@
 
 .about {
   padding-top: rem(88);
+  padding-bottom: rem(84);
 
   @include mq("md") {
 		padding-top: rem(144);
+    padding-bottom: rem(140);
   }
-}
-
-.about__inner {
 }
 
 .about__body {
@@ -40,11 +39,19 @@
 .about__img-left img {
   aspect-ratio: 128 / 194;
   object-fit: cover;
+
+  @include mq("md") {
+		aspect-ratio: 400 / 606;
+  }
 }
 
 .about__img-right img {
   aspect-ratio: 281 / 186;
   object-fit: cover;
+
+  @include mq("md") {
+		aspect-ratio: 880 / 581;
+  }
 }
 
 .about__content-wrap {
@@ -97,7 +104,11 @@
 }
 
 .about__button {
-  margin-top: rem(38);
+  margin-top: rem(40);
+
+  @include mq("md") {
+		margin-top: rem(38);
+  }
 }
 
 // .about__bg {
