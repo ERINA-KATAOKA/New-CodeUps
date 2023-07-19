@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .blog-card {
-  max-width: rem(333);
   width: 100%;
   padding: rem(16) rem(16) rem(24) rem(16);
   background-color: $white;
@@ -18,7 +17,7 @@
 }
 
 .blog-card__body {
-  margin-top: rem(24);
+  margin-top: rem(18);
 }
 
 .blog-card__date {
@@ -28,7 +27,7 @@
 }
 
 .blog-card__title {
-  padding-bottom: rem(4);
+  padding-bottom: rem(3);
   font-size: rem(16);
   font-weight: $medium;
   line-height: (24 / 16);
@@ -36,7 +35,7 @@
 }
 
 .blog-card__text {
-  margin-top: rem(16);
+  margin-top: rem(15);
   font-size: rem(16);
   line-height: (24 / 16);
 }

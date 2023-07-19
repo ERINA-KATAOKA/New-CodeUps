@@ -38,3 +38,11 @@
 .section-heading__subtitle.section-heading__subtitle--large {
   margin-top: rem(-6);
 }
+
+.section-heading__title.section-heading__title--white,
+.section-heading__title.section-heading__title--white span,
+.section-heading__subtitle.section-heading__subtitle--white {
+  @include mq("md") {
+    color: $white;
+  }
+}
