@@ -5,6 +5,7 @@
   bottom: rem(16);
   right: rem(15);
   opacity: 0;
+  z-index: 1000;
   transition: opacity .3s;
 
   @include mq("md") {

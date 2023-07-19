@@ -49,9 +49,9 @@
   font-family: $gotu-font;
   line-height: (22 / 14);
   color: $white;
-  padding-top: rem(16);
-  padding-bottom: rem(16);
-  padding-right: rem(88);
+  padding-top: rem(15);
+  padding-bottom: rem(15);
+  padding-right: rem(87);
   padding-left: rem(40);
 }
 
@@ -68,7 +68,7 @@
 .button__link::before {
   position: absolute;
   content: "";
-  top: 50%;
+  top: 52%;
   right: rem(40);
   transform: translateY(-50%);
   width: rem(40);

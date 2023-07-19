@@ -18,7 +18,7 @@ $(".js-hamburger,.js-drawer").click(function () {
 });
 
 //Slider1
-var slider1 = new Swiper ('.js-slider1', {
+var slider1 = new Swiper ('.js-mv-slider', {
   loop: true,
   effect: "fade",
   speed: 3000,
@@ -27,6 +27,30 @@ var slider1 = new Swiper ('.js-slider1', {
     delay: 3000,
   },
 });
+
+  //Slider2
+  var slider2 = new Swiper ('.js-campaign-slider', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 24,
+    freeModeSticky: true,
+    touchRatio: .03,
+    speed: 300,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 40,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+
 
 
   // 画像のスライドアニメーション
