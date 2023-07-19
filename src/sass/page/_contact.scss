@@ -73,11 +73,11 @@
 
   @include mq("md") {
 		text-align: left;
+    
+    a[href^="tel:"] {
+      pointer-events: none;
+    }
   }
-}
-
-.contact__address a:hover {
-  opacity: 0.7;
 }
 
 .contact__address p:not(:first-child) {
