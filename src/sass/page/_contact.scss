@@ -1,0 +1,128 @@
+@use "global" as *;
+
+.contact {
+  padding-top: rem(80);
+  padding-bottom: rem(104);
+
+  @include mq("md") {
+		padding-top: rem(140);
+    padding-bottom: rem(160);
+  }
+}
+
+.contact__body {
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+		box-shadow: rem(4) rem(4) rem(10) rgba($color: #000000, $alpha: 0.25);
+  }
+}
+
+.contact__left {
+  margin-right: rem(25);
+  margin-left: rem(25);
+
+  @include mq("md") {
+		width: 52.963%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: rem(82);
+    padding-left: rem(50);
+    border-right: rem(1) solid $accent-color;
+  }
+}
+
+.contact__site-name {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: rem(6);
+  border-bottom: rem(1) solid $accent-color;
+
+  @include mq("md") {
+		padding-bottom: rem(8);
+  }
+}
+
+.contact__site-name img {
+  max-width: rem(174);
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq("md") {
+		max-width: rem(200);
+  }
+}
+
+.contact__info {
+  margin-top: rem(11);
+
+  @include mq("md") {
+		display: flex;
+    justify-content: space-between;
+    margin-top: rem(18);
+  }
+}
+
+.contact__address {
+  font-size: rem(16);
+  line-height: (24 / 16);
+  text-align: center;
+
+  @include mq("md") {
+		text-align: left;
+  }
+}
+
+.contact__address a:hover {
+  opacity: 0.7;
+}
+
+.contact__address p:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.contact__map {
+  width: 100%;
+  margin-top: rem(16);
+
+  @include mq("md") {
+		max-width: rem(273);
+    width: 62.045%;
+    margin-top: 0;
+  }
+}
+
+.contact__map iframe {
+  display: block;
+  aspect-ratio: 295 / 160;
+
+  @include mq("md") {
+		aspect-ratio: 273 / 148;
+  }
+}
+
+.contact__right {
+  margin-top: rem(40);
+
+  @include mq("md") {
+    width: 47.037%;
+		margin-top: 0;
+    padding-right: rem(31);
+  }
+}
+
+.contact__text {
+  margin-top: rem(8);
+  font-size: rem(14);
+  line-height: (18 / 14);
+  text-align: center;
+  color: $accent-color;
+}
+
+.contact__button {
+  margin-top: rem(39);
+}
+

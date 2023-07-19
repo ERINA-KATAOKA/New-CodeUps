@@ -30,7 +30,7 @@
 
 .page-top.is-absolute {
   position: absolute;
-  top: rem(-68);
+  top: rem(-64);
 
   @include mq("md") {
     top: rem(-100);
