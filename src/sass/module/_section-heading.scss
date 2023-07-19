@@ -7,6 +7,7 @@
 .section-heading__title {
   font-size: rem(32);
   font-family: $gotu-font;
+  font-weight: $regular;
   line-height: 1;
 
   @include mq("md") {
