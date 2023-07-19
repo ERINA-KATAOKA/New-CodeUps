@@ -8,7 +8,11 @@
   }
 }
 
+.about__inner {
+}
+
 .about__body {
+  position: relative;
   margin-top: rem(28);
 
   @include mq("md") {
@@ -28,9 +32,9 @@
 
 .about__img-right {
   position: relative;
-  z-index: 9;
   margin-top: 7.4%;
   margin-left: -18.55%;
+  z-index: 9;
 }
 
 .about__img-left img {
@@ -42,3 +46,65 @@
   aspect-ratio: 281 / 186;
   object-fit: cover;
 }
+
+.about__content-wrap {
+  @include mq("md") {
+    position: absolute;
+    top: 30.5%;
+    left: 18.518%;
+    display: flex;
+    z-index: 11;
+  }
+}
+
+.about__title {
+  margin-top: rem(40);
+  font-size: rem(40);
+  font-family: $gotu-font;
+  font-weight: $regular;
+  line-height: 1;
+  color: $accent-color;
+
+  @include mq("md") {
+		margin-top: 0;
+    font-size: rem(80);
+    line-height: (100 / 80);
+    color: $white;
+  }
+}
+
+.about__title span {
+  text-transform: capitalize;
+}
+
+.about__text-content {
+  margin-top: rem(16);
+
+  @include mq("md") {
+		margin-top: 0;
+    margin-left: rem(40);
+    margin-right: rem(41);
+  }
+}
+
+.about__text {
+  font-size: rem(16);
+  line-height: (24 / 16);
+
+  @include mq("md") {
+		color: $white;
+  }
+}
+
+.about__button {
+  margin-top: rem(38);
+}
+
+// .about__bg {
+//   position: absolute;
+//   right: (-97 / 1440)*100vw;
+//   bottom: rem(-90);
+//   width: rem(194);
+//   height: rem(181);
+//   z-index: 12;
+// }
