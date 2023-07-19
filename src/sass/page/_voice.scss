@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.voice {
+  padding-top: rem(87);
+  padding-bottom: rem(80);
+
+  @include mq("md") {
+		padding-top: rem(144);
+    padding-bottom: rem(140);
+  }
+}
+
+.voice__cards {
+  margin-top: rem(44);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40);
+
+  @include mq("md") {
+		margin-top: rem(30);
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.voice__button {
+  margin-top: rem(40);
+
+  @include mq("md") {
+		margin-top: rem(80);
+  }
+}
