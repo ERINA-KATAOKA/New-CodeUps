@@ -4,11 +4,44 @@
   padding-top: rem(86);
 
   @include mq("md") {
+    position: relative;
 		padding-top: rem(100);
+  }
+}
+
+.blog__bg {
+
+  @include mq("md") {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(500);
     background-image: url(../images/common/blog-bg.jpg);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: auto rem(500);
+    background-size: cover;
+  }
+}
+
+
+.blog__inner {
+  position: relative;
+}
+
+.blog__inner::before {
+
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    top: rem(-76);
+    left: max(calc(50% - (min(48.062vw,rem(620)))),rem(-80));
+    width: rem(437);
+    height: rem(201);
+    background-image: url(../images/common/blog-bg-fish.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 20;
   }
 }
 

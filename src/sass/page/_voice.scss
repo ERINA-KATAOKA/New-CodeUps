@@ -10,6 +10,43 @@
   }
 }
 
+.voice__inner {
+  position: relative;
+}
+
+.voice__inner::before {
+
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    top: rem(-120);
+    left: max(calc(50% - (min(48.062vw,rem(620)))),rem(-80));
+    width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/bg-fish.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: scale(-1, 1);
+    z-index: 20;
+  }
+}
+
+.voice__inner::after {
+
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    bottom: rem(-71);
+    right: max(calc(50% - (min(47.787vw,rem(540)))),rem(0));
+    width: rem(71);
+    height: rem(162);
+    background-image: url(../images/common/bg-seahorse.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 20;
+  }
+}
+
 .voice__cards {
   margin-top: rem(44);
   display: grid;

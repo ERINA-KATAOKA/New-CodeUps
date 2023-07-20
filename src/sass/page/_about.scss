@@ -19,6 +19,22 @@
   }
 }
 
+.about__body::after {
+
+  @include mq("md") {
+		position: absolute;
+    content: "";
+    bottom: rem(-90);
+    right: max(calc(50% - (min(48.111vw,rem(662)))),rem(-97));
+    width: rem(194);
+    height: rem(181);
+    background-image: url(../images/common/bg-coral.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 20;
+  }
+}
+
 .about__img-wrap {
   display: flex;
   width: 100%;

@@ -11,6 +11,25 @@
   }
 }
 
+.price__inner {
+  position: relative;
+}
+
+.price__inner::before {
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    bottom: rem(-44);
+    left: max(calc(50% - (min(48.062vw,rem(620)))),rem(-80));
+    width: rem(437);
+    height: rem(201);
+    background-image: url(../images/common/bg-fish.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 20;
+  }
+}
+
 .price__body {
   margin-top: rem(28);
 
