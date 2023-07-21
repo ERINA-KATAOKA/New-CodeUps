@@ -66,34 +66,20 @@
   text-transform: capitalize;
 }
 
-.button__link::before {
-  position: absolute;
-  content: "";
-  top: 52%;
-  right: rem(40);
-  transform: translateY(-50%);
-  width: rem(40);
-  height: rem(1);
-  background-color: $white;
-  border-radius: 50%;
-}
-
 .button__link::after {
   position: absolute;
   content: "";
-  top: 50%;
+  top: 47%;
   right: rem(40);
   transform: translateY(-50%);
-  width: rem(10);
-  height: rem(1);
-  background-color: $white;
-  border-radius: 50%;
-  transform: rotate(45deg);
-  transform-origin: right center;
+  width: rem(42);
+  height: rem(8);
+  background-image: url(../images/common/button-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.button__link:hover::before,
 .button__link:hover::after {
-  background-color: $accent-color;
-  transition: background-color .2s cubic-bezier(0.45, 0, 0.55, 1);
+  background-image: url(../images/common/button-arrow-green.svg);
+  transition: background-image .2s cubic-bezier(0.45, 0, 0.55, 1);
 }

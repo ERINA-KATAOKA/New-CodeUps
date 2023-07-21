@@ -92,11 +92,15 @@
 .campaign-card__del-price::after {
   position: absolute;
   content: "";
-  top: 42%;
+  top: 36%;
   right: rem(-2);
   left: 0;
   height: rem(3);
   background-color: #C94800;
+
+  @include mq("md") {
+    top: 42%;
+  }
 }
 
 .campaign-card__del-price del {

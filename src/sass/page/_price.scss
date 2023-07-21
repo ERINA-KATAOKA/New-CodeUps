@@ -63,7 +63,7 @@
 
   @include mq("md") {
     width: 45.555%;
-		margin-top: 0;
+		margin-top: rem(-1);
   }
 }
 

@@ -46,16 +46,16 @@
 
 .voice-card__title {
   margin-top: rem(4);
-  padding-bottom: rem(4);
+  padding-bottom: rem(3);
   font-size: rem(16);
   font-weight: $medium;
   line-height: 1.45;
   border-bottom: rem(1) solid $accent-color;
 
   @include mq("md") {
-		margin-top: rem(10);
+		margin-top: rem(8);
     font-size: rem(24);
-    line-height: 1.4;
+    line-height: 1.45;
   }
 }
 
