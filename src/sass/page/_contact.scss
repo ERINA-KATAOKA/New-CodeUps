@@ -122,7 +122,10 @@
 
 .contact__map iframe {
   display: block;
+  width: 100%;
+  height: 100%;
   aspect-ratio: 295 / 160;
+  object-fit: cover;
 
   @include mq("md") {
 		aspect-ratio: 273 / 148;
