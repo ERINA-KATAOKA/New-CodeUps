@@ -18,7 +18,7 @@ $(".js-hamburger,.js-drawer").click(function () {
 });
 
 //Slider1
-var slider1 = new Swiper ('.js-mv-slider', {
+const slider1 = new Swiper ('.js-mv-slider', {
   loop: true,
   effect: "fade",
   speed: 3000,
@@ -29,20 +29,28 @@ var slider1 = new Swiper ('.js-mv-slider', {
 });
 
   //Slider2
-  var slider2 = new Swiper ('.js-campaign-slider', {
+  const slider2 = new Swiper ('.js-campaign-slider', {
     loop: true,
-    slidesPerView: 'auto',
+    slidesPerView: "1",
     spaceBetween: 24,
     freeModeSticky: true,
-    touchRatio: .03,
-    speed: 300,
+    speed: 2000,
+    loopAdditionalSlides: 2,
+    width: 290,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     },
     breakpoints: {
       768: {
+        slidesPerView: "3.42342",
         spaceBetween: 40,
+        width: 1246.95171,
+      },
+      1920: {
+        slidesPerView: "4.05405",
+        spaceBetween: 40,
+        width: 1482.18921,
       },
     },
     navigation: {
