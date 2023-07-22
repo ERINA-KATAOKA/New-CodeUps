@@ -38,9 +38,10 @@
   transition: all .2s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: -1;
 }
-
-.button__content:hover::after {
-  transform: scale(1, 1);
+@media(hover: hover) {
+  .button__content:hover::after {
+    transform: scale(1, 1);
+  }
 }
 
 .button__link {
@@ -56,9 +57,11 @@
   padding-left: rem(40);
 }
 
-.button__link:hover {
-  color: $accent-color;
-  transition: color .2s cubic-bezier(0.45, 0, 0.55, 1);
+@media(hover: hover) {
+  .button__link:hover {
+    color: $accent-color;
+    transition: color .2s cubic-bezier(0.45, 0, 0.55, 1);
+  }
 }
 
 .button__link span {
@@ -79,7 +82,9 @@
   background-size: contain;
 }
 
-.button__link:hover::after {
-  background-image: url(../images/common/button-arrow-green.svg);
-  transition: background-image .2s cubic-bezier(0.45, 0, 0.55, 1);
+@media(hover: hover) {
+  .button__link:hover::after {
+    background-image: url(../images/common/button-arrow-green.svg);
+    transition: background-image .2s cubic-bezier(0.45, 0, 0.55, 1);
+  }
 }
