@@ -111,6 +111,6 @@
 .header__nav-subtitle {
   margin-top: rem(4);
   font-size: rem(10);
-  line-height: (15 / 10);
+  line-height: calc(15 / 10);
   color: $white;
 }

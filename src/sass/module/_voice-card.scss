@@ -28,14 +28,14 @@
 
 .voice-card__age {
   font-size: rem(12);
-  line-height: (18 /12);
+  line-height: calc(18 /12);
 }
 
 .voice-card__label {
   display: inline-block;
   padding: rem(3) rem(11);
   font-size: rem(12);
-  line-height: (22 / 12);
+  line-height: calc(22 / 12);
   color: $accent-color;
   border: rem(1) solid $accent-color;
 
@@ -82,7 +82,7 @@
 .voice-card__text {
   margin-top: rem(15);
   font-size: rem(16);
-  line-height: (24 / 16);
+  line-height: calc(24 / 16);
 
   @include mq("md") {
 		margin-top: rem(40);

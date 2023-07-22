@@ -28,7 +28,7 @@
 .section-heading__subtitle {
   margin-top: rem(8);
   font-size: rem(12);
-  line-height: (18 / 12);
+  line-height: calc(18 / 12);
   color: $accent-color;
 
   @include mq("md") {

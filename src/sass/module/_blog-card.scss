@@ -23,19 +23,19 @@
 .blog-card__date {
   font-size: rem(12);
   font-family: $gotu-font;
-  line-height: (18 / 12);
+  line-height: calc(18 / 12);
 }
 
 .blog-card__title {
   padding-bottom: rem(3);
   font-size: rem(16);
   font-weight: $medium;
-  line-height: (24 / 16);
+  line-height: calc(24 / 16);
   border-bottom: rem(1) solid $accent-color;
 }
 
 .blog-card__text {
   margin-top: rem(15);
   font-size: rem(16);
-  line-height: (24 / 16);
+  line-height: calc(24 / 16);
 }

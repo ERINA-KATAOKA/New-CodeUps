@@ -39,7 +39,7 @@
   display: inline-block;
   padding: rem(3) rem(11);
   font-size: rem(12);
-  line-height: (22 / 12);
+  line-height: calc(22 / 12);
   color: $accent-color;
   border: rem(1) solid $accent-color;
 
@@ -53,20 +53,20 @@
   padding-bottom: rem(8);
   font-size: rem(16);
   font-weight: $medium;
-  line-height: (24 / 16);
+  line-height: calc(24 / 16);
   border-bottom: rem(1) solid $accent-color;
 }
 
 .campaign-card__text {
   margin-top: rem(8);
   font-size: rem(14);
-  line-height: (24 / 14);
+  line-height: calc(24 / 14);
   text-align: center;
 
   @include mq("md") {
     margin-top: rem(16);
     font-size: rem(16);
-    line-height: (24 / 16);
+    line-height: calc(24 / 16);
   }
 }
 

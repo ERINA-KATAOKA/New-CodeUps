@@ -48,7 +48,7 @@
   display: inline-block;
   font-size: rem(14);
   font-family: $gotu-font;
-  line-height: (22 / 14);
+  line-height: calc(22 / 14);
   color: $white;
   padding-top: rem(15);
   padding-bottom: rem(15);

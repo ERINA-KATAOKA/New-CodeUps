@@ -51,7 +51,7 @@
   padding-bottom: rem(4);
   font-size: rem(20);
   font-weight: $bold;
-  line-height: (24 / 20);
+  line-height: calc(24 / 20);
   border-bottom: rem(1) solid $accent-color;
 
   @include mq("md") {
@@ -64,7 +64,7 @@
 .information__text {
   margin-top: rem(7);
   font-size: rem(16);
-  line-height: (24 / 16);
+  line-height: calc(24 / 16);
 
   @include mq("md") {
 		margin-top: rem(8);

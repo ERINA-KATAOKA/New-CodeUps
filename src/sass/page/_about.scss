@@ -91,7 +91,7 @@
   @include mq("md") {
 		margin-top: 0;
     font-size: rem(80);
-    line-height: (100 / 80);
+    line-height: calc(100 / 80);
     color: $white;
   }
 }
@@ -112,7 +112,7 @@
 
 .about__text {
   font-size: rem(16);
-  line-height: (24 / 16);
+  line-height: calc(24 / 16);
 
   @include mq("md") {
 		color: $white;

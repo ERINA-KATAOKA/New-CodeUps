@@ -20,8 +20,8 @@
   top: rem(-26);
   right: calc(50% - 46vw);
   max-width: rem(180);
-  width: (109 / 375)*100vw;
-  height: (50 / 375)*100vw;
+  width: calc(109 / 375)*100vw;
+  height: calc(50 / 375)*100vw;
   background-image: url(../images/common/bg-fish.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -93,7 +93,7 @@
 
 .contact__address {
   font-size: rem(16);
-  line-height: (24 / 16);
+  line-height: calc(24 / 16);
   text-align: center;
 
   @include mq("md") {
@@ -145,7 +145,7 @@
 .contact__text {
   margin-top: rem(8);
   font-size: rem(14);
-  line-height: (18 / 14);
+  line-height: calc(18 / 14);
   text-align: center;
   color: $accent-color;
 }

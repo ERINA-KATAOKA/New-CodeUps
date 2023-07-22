@@ -28,7 +28,6 @@ var slider1 = new Swiper ('.js-mv-slider', {
   },
 });
 
-
   //Slider2
   var slider2 = new Swiper ('.js-campaign-slider', {
     loop: true,
