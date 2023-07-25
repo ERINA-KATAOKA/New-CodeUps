@@ -12,6 +12,12 @@
 
 .voice__inner {
   position: relative;
+  max-width: rem(600);
+  width: 100%;
+
+  @include mq("md") {
+    max-width: 100%;
+  }
 }
 
 .voice__inner::before {
@@ -49,13 +55,9 @@
 
 .voice__cards {
   margin-top: rem(44);
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: rem(40);
 
   @include mq("md") {
 		margin-top: rem(30);
-    grid-template-columns: 1fr 1fr;
   }
 }
 

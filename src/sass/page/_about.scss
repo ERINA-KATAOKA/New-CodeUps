@@ -10,6 +10,15 @@
   }
 }
 
+.about__inner {
+  max-width: rem(600);
+  width: 100%;
+
+  @include mq("md") {
+		max-width: 100%;
+  }
+}
+
 .about__body {
   position: relative;
   margin-top: rem(28);

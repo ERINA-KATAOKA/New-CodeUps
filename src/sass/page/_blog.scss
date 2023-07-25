@@ -24,9 +24,14 @@
   }
 }
 
-
 .blog__inner {
   position: relative;
+  max-width: rem(612);
+  width: 100%;
+
+  @include mq("md") {
+    max-width: 100%;
+  }
 }
 
 .blog__inner::before {
@@ -47,19 +52,13 @@
 
 .blog__cards {
   margin-top: rem(28);
-  margin-right: rem(6);
-  margin-left: rem(6);
-  display: grid;
-  gap: rem(40);
-  grid-template-columns: 1fr;
-  justify-items: center;
-
+  padding-right: rem(6);
+  padding-left: rem(6);
 
   @include mq("md") {
 		margin-top: rem(80);
-    margin-right: 0;
-    margin-left: 0;
-    grid-template-columns: repeat(3, 1fr);
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

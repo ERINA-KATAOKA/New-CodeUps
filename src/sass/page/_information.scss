@@ -11,6 +11,15 @@
   }
 }
 
+.information__inner {
+  max-width: rem(600);
+  width: 100%;
+
+  @include mq("md") {
+		max-width: 100%;
+  }
+}
+
 .information__body {
   width: 100%;
   margin-top: rem(28);

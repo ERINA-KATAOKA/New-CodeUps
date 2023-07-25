@@ -12,6 +12,12 @@
 
 .contact__inner {
   position: relative;
+  max-width: rem(600);
+  width: 100%;
+
+  @include mq("md") {
+		max-width: 100%;
+  }
 }
 
 .contact__inner::after {
@@ -82,7 +88,7 @@
 }
 
 .contact__info {
-  margin-top: rem(11);
+  margin-top: rem(9);
 
   @include mq("md") {
 		display: flex;
@@ -133,7 +139,7 @@
 }
 
 .contact__right {
-  margin-top: rem(40);
+  margin-top: rem(41);
 
   @include mq("md") {
     width: 47.037%;

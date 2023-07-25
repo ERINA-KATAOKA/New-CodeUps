@@ -13,6 +13,12 @@
 
 .price__inner {
   position: relative;
+  max-width: rem(600);
+  width: 100%;
+
+  @include mq("md") {
+		max-width: 100%;
+  }
 }
 
 .price__inner::before {
@@ -76,8 +82,8 @@
   margin-top: rem(38);
 }
 
-.price__list-title th {
-  padding-bottom: rem(4);
+.price__list-title th h3 {
+  padding-bottom: rem(3);
   font-size: rem(16);
   font-weight: $bold;
   line-height: calc(24 / 16);
@@ -99,6 +105,7 @@
 .price__list-item td:nth-child(2) {
   text-align: right;
   padding-right: 0;
+  padding-left: rem(20);
 }
 
 .price__button {

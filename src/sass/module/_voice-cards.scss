@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.voice-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: rem(40);
+  row-gap: rem(40);
+
+  @include mq("md") {
+    grid-template-columns: 1fr 1fr;
+    row-gap: rem(80);
+  }
+}

@@ -39,10 +39,15 @@
   width: 100%;
   position: relative;
   z-index: 9999;
+  transition: opacity .3s;
 
   @include mq("md") {
     max-width: rem(133);
   }
+}
+
+.header__name:hover {
+  opacity: .7;
 }
 
 .header__pc-nav {

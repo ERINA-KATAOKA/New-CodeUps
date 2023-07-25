@@ -37,6 +37,7 @@ const slider1 = new Swiper ('.js-mv-slider', {
     speed: 2000,
     loopAdditionalSlides: 2,
     width: 290,
+    // autoHeight: true,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,

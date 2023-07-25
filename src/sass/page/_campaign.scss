@@ -21,6 +21,8 @@
 
 .campaign__cards {
   margin-top: rem(28);
+  display: grid;
+  grid-auto-flow: column;
 
   @include mq("md") {
 		margin-top: rem(40);
@@ -28,11 +30,9 @@
 }
 
 .campaign__card {
-  // max-width: rem(280);
   width: 100%;
 
   @include mq("md") {
-		// max-width: rem(333);
   }
 }
 
@@ -54,7 +54,8 @@
   width: rem(80);
 
   @include mq("md") {
-		opacity: 1;
+    opacity: 1;
+    transition: opacity .3s;
   }
 }
 
@@ -82,4 +83,9 @@
 /* 次への矢印カスタマイズ */
 .campaign__card-next:after {
   background-image: url(../images/common/next.png);
+}
+
+.campaign__card-prev:hover,
+.campaign__card-next:hover {
+  opacity: 0.7;
 }
