@@ -18,6 +18,14 @@
   justify-content: space-between;
 }
 
+.voice-card__content {
+  width: 47.6038%;
+
+  @include mq("md") {
+		width: 58.4746%;
+  }
+}
+
 .voice-card__category {
   @include mq("md") {
 		display: flex;
@@ -60,13 +68,10 @@
 }
 
 .voice-card__img {
-  max-width: rem(151);
-  width: 100%;
-  margin-left: rem(9);
+  width: 48.24281%;
 
   @include mq("md") {
-    max-width: rem(180);
-		margin-left: rem(16);
+    width: 38.1356%;
   }
 }
 

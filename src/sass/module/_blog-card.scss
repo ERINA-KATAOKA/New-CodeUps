@@ -1,7 +1,8 @@
 @use "global" as *;
 
 .blog-card {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background-color: $white;
   box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
@@ -15,7 +16,9 @@
 }
 
 .blog-card__link {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   padding: rem(16) rem(16) rem(24) rem(16);
   cursor: pointer;
 }
@@ -36,7 +39,10 @@
 }
 
 .blog-card__body {
-  margin-top: rem(18);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: rem(23);
 }
 
 .blog-card__date {
@@ -46,7 +52,8 @@
 }
 
 .blog-card__title {
-  padding-bottom: rem(3);
+  flex-grow: 1;
+  padding-bottom: rem(4);
   font-size: rem(16);
   font-weight: $medium;
   line-height: calc(24 / 16);
@@ -54,7 +61,7 @@
 }
 
 .blog-card__text {
-  margin-top: rem(15);
+  margin-top: rem(16);
   font-size: rem(16);
   line-height: calc(24 / 16);
 }

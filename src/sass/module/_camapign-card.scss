@@ -5,9 +5,14 @@
   background-color: $white;
   box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
   transition: box-shadow .3s, opacity .3s;
+  display: flex;
+  flex-direction: column;
 }
 
-.campaign-card__link a {
+.campaign-card__link {
+  display: inherit;
+  flex-direction: inherit;
+  flex-grow: 1;
   cursor: pointer;
 }
 
@@ -34,6 +39,9 @@
   padding-bottom: rem(24);
   padding-right: rem(16);
   padding-left: rem(16);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 
   @include mq("md") {
     padding-top: rem(24);
@@ -44,6 +52,7 @@
 .campaign-card__label {
   display: inline-block;
   padding: rem(3) rem(11);
+  width: fit-content;
   font-size: rem(12);
   line-height: calc(22 / 12);
   color: $accent-color;
@@ -61,6 +70,7 @@
   font-weight: $medium;
   line-height: calc(24 / 16);
   border-bottom: rem(1) solid $accent-color;
+  flex-grow: 1;
 }
 
 .campaign-card__text {
