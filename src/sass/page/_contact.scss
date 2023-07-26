@@ -1,12 +1,12 @@
 @use "global" as *;
 
 .contact {
-  padding-top: rem(80);
-  padding-bottom: rem(104);
+  margin-top: rem(80);
+  margin-bottom: rem(104);
 
   @include mq("md") {
-		padding-top: rem(140);
-    padding-bottom: rem(160);
+		margin-top: rem(140);
+    margin-bottom: rem(160);
   }
 }
 
@@ -88,7 +88,7 @@
 }
 
 .contact__info {
-  margin-top: rem(9);
+  margin-top: rem(10);
 
   @include mq("md") {
 		display: flex;

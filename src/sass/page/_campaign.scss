@@ -1,10 +1,10 @@
 @use "global" as *;
 
 .campaign {
-  padding-top: rem(44);
+  margin-top: rem(44);
 
   @include mq("md") {
-		padding-top: rem(120);
+		margin-top: rem(120);
   }
 }
 
@@ -13,20 +13,20 @@
 }
 
 .campaign__swiper {
+  margin-top: rem(28);
   margin-right: calc(50% - 50vw);
   padding-bottom: rem(10);
   padding-left: rem(10);
   margin-left: rem(-10);
+
+  @include mq("md") {
+    margin-top: rem(40);
+  }
 }
 
 .campaign__cards {
-  margin-top: rem(28);
   display: grid;
   grid-auto-flow: column;
-
-  @include mq("md") {
-		margin-top: rem(40);
-  }
 }
 
 .campaign__card {

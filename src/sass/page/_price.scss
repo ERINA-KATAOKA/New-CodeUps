@@ -1,11 +1,13 @@
 @use "global" as *;
 
 .price {
+  margin-top: rem(84);
   padding-top: rem(84);
   padding-bottom: rem(84);
   background-color: $bg-green;
 
   @include mq("md") {
+    margin-top: rem(144);
     padding-top: rem(100);
     padding-bottom: rem(104);
   }
@@ -69,20 +71,19 @@
 
   @include mq("md") {
     width: 45.555%;
-		margin-top: rem(-1);
+		margin-top: 0;
   }
 }
 
 .price__list {
   width: 100%;
-  border-collapse: collapse;
 }
 
 .price__list:not(:first-child) {
-  margin-top: rem(38);
+  margin-top: rem(40);
 }
 
-.price__list-title th h3 {
+.price__list-title {
   padding-bottom: rem(3);
   font-size: rem(16);
   font-weight: $bold;
@@ -91,8 +92,11 @@
   border-bottom: rem(1) solid $accent-color;
 }
 
-.price__list-item td {
-  padding-top: rem(7);
+.price__list-item {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  row-gap: rem(8);
+  padding-top: rem(8);
   font-size: rem(14);
   line-height: calc(24 / 14);
 
@@ -102,14 +106,12 @@
   }
 }
 
-.price__list-item td:nth-child(2) {
+.price__list-item dd {
   text-align: right;
-  padding-right: 0;
-  padding-left: rem(20);
 }
 
 .price__button {
-  margin-top: rem(39);
+  margin-top: rem(40);
 
   @include mq("md") {
 		margin-top: rem(80);

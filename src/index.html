@@ -117,7 +117,8 @@
       </div>
 
       <!-- sp-nav -->
-      <div class="drawer js-drawer">
+      <div class="header__sp-nav drawer js-drawer">
+        <div class="drawer__header"></div>
         <div class="drawer__inner">
           <nav class="drawer__nav">
             <ul class="drawer__left">
@@ -444,80 +445,54 @@
             <img class="slide-animation__img u-mobile" src="./assets/images/common/price-sp.jpg" alt="ボートが浮かぶ海の様子">
             <img class="slide-animation__img u-desktop" src="./assets/images/common/price-pc.jpg" alt="ボートが浮かぶ海の様子">
           </div>
-          <div class="price__list-wrap">
-            <table class="price__list">
-              <tr class="price__list-title">
-                <th colspan="2"><h3>ライセンス講習</h3></th>
-              </tr>
-              <tr class="price__list-item">
-                <td>オープンウォーターダイバーコース</td>
-                <td>&#165;50,000</td>
-              </tr>
-              <tr class="price__list-item">
-                <td>アドバンスドオープンウォーターコース</td>
-                <td>&#165;60,000</td>
-              </tr>
-              <tr class="price__list-item">
-                <td>レスキュー＋EFRコース</td>
-                <td>&#165;70,000</td>
-              </tr>
-            </table>
-            <table class="price__list">
-              <tr class="price__list-title">
-                <th colspan="2"><h3>体験ダイビング</h3></th>
-              </tr>
-              <tr class="price__list-item">
-                <td>ビーチ体験ダイビング(半日)</td>
-                <td>&#165;7,000</td>
-              </tr>
-              <tr class="price__list-item">
-                <td>ビーチ体験ダイビング(1日)</td>
-                <td>&#165;14,000</td>
-              </tr>
-              <tr class="price__list-item">
-                <td>ボート体験ダイビング(半日)</td>
-                <td>&#165;10,000</td>
-              </tr>
-              <tr class="price__list-item">
-                <td>ボート体験ダイビング(1日)</td>
-                <td>&#165;18,000</td>
-              </tr>
-            </table>
-            <table class="price__list">
-              <tr class="price__list-title">
-                <th colspan="2"><h3>ファンダイビング</h3></th>
-              </tr>
-              <tr class="price__list-item">
-                <td>ビーチダイビング(2ダイブ)</td>
-                <td>&#165;14,000</td>
-              </tr>
-              <tr class="price__list-item">
-                <td>ボートダイビング(2ダイブ)</td>
-                <td>&#165;18,000</td>
-              </tr>
-              <tr class="price__list-item">
-                <td>スペシャルダイビング(2ダイブ)</td>
-                <td>&#165;24,000</td>
-              </tr>
-              <tr class="price__list-item">
-                <td>ナイトダイビング(1ダイブ)</td>
-                <td>&#165;10,000</td>
-              </tr>
-            </table>
-            <table class="price__list">
-              <tr class="price__list-title">
-                <th colspan="2"><h3>スペシャルダイビング</h3></th>
-              </tr>
-              <tr class="price__list-item">
-                <td>貸切ダイビング(2ダイブ)</td>
-                <td>&#165;24,000</td>
-              </tr>
-              <tr class="price__list-item">
-                <td>1日ダイビング(3ダイブ)</td>
-                <td>&#165;32,000</td>
-              </tr>
-            </table>
-          </div>
+          <ul class="price__list-wrap">
+            <li class="price__list">
+              <h3 class="price__list-title">ライセンス講習</h3>
+              <dl class="price__list-item">
+                <dt>オープンウォーターダイバーコース</dt>
+                <dd>&#165;50,000</dd>
+                <dt>アドバンスドオープンウォーターコース</dt>
+                <dd>&#165;60,000</dd>
+                <dt>レスキュー＋EFRコース</dt>
+                <dd>&#165;70,000</dd>
+              </dl>
+            </li>
+            <li class="price__list">
+              <h3 class="price__list-title">体験ダイビング</h3>
+              <dl class="price__list-item">
+                <dt>ビーチ体験ダイビング(半日)</dt>
+                <dd>&#165;7,000</dd>
+                <dt>ビーチ体験ダイビング(1日)</dt>
+                <dd>&#165;14,000</dd>
+                <dt>ボート体験ダイビング(半日)</dt>
+                <dd>&#165;10,000</dd>
+                <dt>ボート体験ダイビング(1日)</dt>
+                <dd>&#165;18,000</dd>
+              </dl>
+            </li>
+            <li class="price__list">
+              <h3 class="price__list-title">ファンダイビング</h3>
+              <dl class="price__list-item">
+                <dt>ビーチダイビング(2ダイブ)</dt>
+                <dd>&#165;14,000</dd>
+                <dt>ボートダイビング(2ダイブ)</dt>
+                <dd>&#165;18,000</dd>
+                <dt>スペシャルダイビング(2ダイブ)</dt>
+                <dd>&#165;24,000</dd>
+                <dt>ナイトダイビング(1ダイブ)</dt>
+                <dd>&#165;10,000</dd>
+              </dl>
+            </li>
+            <li class="price__list">
+              <h3 class="price__list-title">スペシャルダイビング</h3>
+              <dl class="price__list-item">
+                <dt>貸切ダイビング(2ダイブ)</dt>
+                <dd>&#165;24,000</dd>
+                <dt>1日ダイビング(3ダイブ)</dt>
+                <dd>&#165;32,000</dd>
+              </dl>
+            </li>
+          </ul>
         </div>
         <div class="price__button button">
           <div class="button__content">
@@ -543,7 +518,7 @@
                 <p>定休日:毎週火曜日</p>
               </div>
               <div class="contact__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.2208648795754!2d127.66749385125549!3d26.22201216811182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56984e1c7b5d9%3A0xc07cbb2e519b8ee3!2z44CSOTAwLTAwMzEg5rKW57iE55yM6YKj6KaH5biC6Iul54ut77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1689797927414!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34556.27835744567!2d132.31321682211393!3d34.29024892677205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601ae3047ec76d8f%3A0x357228f7d0b5d590!2z5Zq05bO256We56S-!5e0!3m2!1sja!2sjp!4v1690333003496!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
