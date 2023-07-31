@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 4000;
+}
+
+.loading__inner {
+  position: relative;
+  width: 100%;
+  height: inherit;
+}
+
+.loading__title-wrap {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: $accent-color;
+}
+
+.loading__title {
+  font-size: rem(80);
+  font-family: $lato-font;
+  font-weight: $regular;
+  line-height: 1;
+  letter-spacing: 0.53em;
+  text-indent: 0.53em;
+  text-transform: uppercase;
+}
+
+.loading__subtitle {
+  margin-top: rem(18);
+  font-size: rem(20);
+  font-family: $gotu-font;
+  font-weight: $regular;
+  line-height: 1;
+}
+
+.loading__img-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loading__img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 720 / 768;
+  object-fit: cover;
+}

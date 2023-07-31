@@ -1,3 +1,21 @@
+// ローディングアニメーション
+window.addEventListener('DOMContentLoaded',function(){
+  const openingTL = gsap.timeline();
+  openingTL
+  .fromTo('.js-loading__title',
+    {clipPath:'inset(100% 0 0 0)',scale:1.1,autoAlpha:0},
+    {clipPath:'inset(0% 0 0 0)',scale:1,autoAlpha:1,duration:2,ease:'power4.out',delay:1})
+  .fromTo('.js-loading__img',
+    {y:'100%'},
+    {y:'0%',duration:2,ease:'power4.out',stagger:.1},'-=0.5')
+  .to('.js-loading__title',{autoAlpha:0,duration:.8},'<')
+  .fromTo('.js-loading__title',
+    {autoAlpha:0,scale:0.9},
+    {autoAlpha:1,scale:1,duration:1,ease:'power4.in',color:'#fff'},'-=.5')
+    // {clipPath:'inset(100% 0 0 0)',scale:0.9,autoAlpha:0},
+    // {clipPath:'inset(0% 0 0 0)',scale:1,autoAlpha:1,duration:2,ease:'power4.in',delay:1},'-=6')
+  .fromTo('.js-loading',{autoAlpha:1},{autoAlpha:0,duration:1,ease:'power4.in'},'+=2')
+})
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
