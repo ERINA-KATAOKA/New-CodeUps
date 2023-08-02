@@ -1,18 +1,15 @@
 @use "global" as *;
 
 .blog {
-  padding-top: rem(86);
-
   @include mq("md") {
     position: relative;
-		padding-top: rem(100);
   }
 }
 
-.blog__bg {
-
+.blog::before {
   @include mq("md") {
     position: absolute;
+    content: '';
     top: 0;
     left: 0;
     width: 100%;
@@ -40,7 +37,7 @@
     position: absolute;
     content: "";
     top: rem(-76);
-    left: max(calc(50% - (min(48.062vw,rem(620)))),rem(-80));
+    left: calc(50% - (min(48.062vw,rem(620))));
     width: rem(437);
     height: rem(201);
     background-image: url(../images/common/blog-bg-fish.png);

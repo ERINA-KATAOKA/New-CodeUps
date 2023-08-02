@@ -1,5 +1,9 @@
+
 // ローディングアニメーション
-window.addEventListener('DOMContentLoaded',function(){
+const keyName = 'visited';
+const keyValue = true;
+
+const openingAnimation = () => {
   const openingTL = gsap.timeline();
   openingTL
   .fromTo('.js-loading__title',
@@ -12,13 +16,22 @@ window.addEventListener('DOMContentLoaded',function(){
   .fromTo('.js-loading__title',
     {autoAlpha:0,scale:0.9},
     {autoAlpha:1,scale:1,duration:1,ease:'power4.in',color:'#fff'},'-=.5')
-    // {clipPath:'inset(100% 0 0 0)',scale:0.9,autoAlpha:0},
-    // {clipPath:'inset(0% 0 0 0)',scale:1,autoAlpha:1,duration:2,ease:'power4.in',delay:1},'-=6')
   .fromTo('.js-loading',{autoAlpha:1},{autoAlpha:0,duration:1,ease:'power4.in'},'+=2')
-})
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (!sessionStorage.getItem(keyName)) {
+    // 初回訪問時の処理
+    sessionStorage.setItem(keyName, keyValue);
+    openingAnimation();
+  } else {
+    // 2回目以降の訪問時の処理
+    document.querySelector('.js-loading').style.display = 'none';
+  }
+});
+
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-
 // ヘッダー背景変更
 $(window).on('scroll', function () {
   if ($('.mv').height() < $(this).scrollTop()) {
@@ -49,27 +62,17 @@ const slider1 = new Swiper ('.js-mv-slider', {
   //Slider2
   const slider2 = new Swiper ('.js-campaign-slider', {
     loop: true,
-    slidesPerView: "1",
+    slidesPerView: "auto",
     spaceBetween: 24,
     freeModeSticky: true,
     speed: 2000,
-    loopAdditionalSlides: 2,
-    width: 290,
-    // autoHeight: true,
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
     },
     breakpoints: {
       768: {
-        slidesPerView: "3.42342",
         spaceBetween: 40,
-        width: 1246.95171,
-      },
-      1920: {
-        slidesPerView: "4.05405",
-        spaceBetween: 40,
-        width: 1482.18921,
       },
     },
     navigation: {

@@ -1,13 +1,5 @@
 @use "global" as *;
 
-.about {
-  margin-top: rem(88);
-
-  @include mq("md") {
-		margin-top: rem(144);
-  }
-}
-
 .about__inner {
   max-width: rem(600);
   width: 100%;
@@ -32,7 +24,7 @@
 		position: absolute;
     content: "";
     bottom: rem(-90);
-    right: max(calc(50% - (min(48.111vw,rem(662)))),rem(-97));
+    right: calc(50% - (min(48.111vw,rem(637))));
     width: rem(194);
     height: rem(181);
     background-image: url(../images/common/bg-coral.png);

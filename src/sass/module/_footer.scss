@@ -4,13 +4,6 @@
   position: relative;
   width: 100%;
   background-color: $accent-color;
-  padding-top: rem(48);
-  padding-bottom: rem(56);
-
-  @include mq("md") {
-		padding-top: rem(80);
-    padding-bottom: rem(80);
-  }
 }
 
 .footer__inner {

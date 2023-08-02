@@ -4,16 +4,7 @@
   text-align: center;
 }
 
-.button__content {
-  position: relative;
-  display: inline-block;
-  border: rem(1) solid $accent-color;
-  background-color: $accent-color;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.button__content::before {
+.button__link::before {
   position: absolute;
   content: "";
   top: rem(4);
@@ -24,7 +15,7 @@
   z-index: -2;
 }
 
-.button__content::after {
+.button__link::after {
   position: absolute;
   content: "";
   top: 0;
@@ -38,7 +29,7 @@
   z-index: -1;
 }
 @media(hover: hover) {
-  .button__content:hover::after {
+  .button__link:hover::after {
     transform: scale(1, 1);
   }
 }
@@ -54,6 +45,10 @@
   padding-bottom: rem(15);
   padding-right: rem(87);
   padding-left: rem(40);
+  border: rem(1) solid $accent-color;
+  background-color: $accent-color;
+  cursor: pointer;
+  z-index: 1;
 }
 
 @media(hover: hover) {
@@ -68,7 +63,7 @@
   text-transform: capitalize;
 }
 
-.button__link::after {
+.button__link span::after {
   position: absolute;
   content: "";
   top: 47%;
@@ -82,7 +77,7 @@
 }
 
 @media(hover: hover) {
-  .button__link:hover::after {
+  .button__link:hover span::after {
     background-image: url(../images/common/button-arrow-green.svg);
     transition: background-image .2s cubic-bezier(0.45, 0, 0.55, 1);
   }

@@ -9,20 +9,24 @@
   font-family: $gotu-font;
   font-weight: $regular;
   line-height: 1;
+  text-transform: capitalize;
 
   @include mq("md") {
     font-size: rem(40);
   }
 }
 
+.section-heading__title span {
+  display: inline-block;
+  text-transform: lowercase;
+}
+
 .section-heading__title.section-heading__title--large {
   font-size: rem(80);
 }
 
-.section-heading__title span {
-  display: inline-block;
+.section-heading__title::first-letter {
   color: $accent-color;
-  text-transform: uppercase;
 }
 
 .section-heading__subtitle {
@@ -41,9 +45,9 @@
 }
 
 .section-heading__title.section-heading__title--white,
-.section-heading__title.section-heading__title--white span,
+.section-heading__title.section-heading__title--white::first-letter,
 .section-heading__subtitle.section-heading__subtitle--white {
-  @include mq("md") {
+@include mq("md") {
     color: $white;
   }
 }

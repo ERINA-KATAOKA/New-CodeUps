@@ -1,26 +1,13 @@
 @use "global" as *;
 
 .price {
-  margin-top: rem(84);
-  padding-top: rem(84);
-  padding-bottom: rem(84);
   background-color: $bg-green;
-
-  @include mq("md") {
-    margin-top: rem(144);
-    padding-top: rem(100);
-    padding-bottom: rem(104);
-  }
 }
 
 .price__inner {
   position: relative;
   max-width: rem(600);
   width: 100%;
-
-  @include mq("md") {
-		max-width: 100%;
-  }
 }
 
 .price__inner::before {
@@ -28,7 +15,7 @@
     position: absolute;
     content: "";
     bottom: rem(-44);
-    left: max(calc(50% - (min(48.062vw,rem(620)))),rem(-80));
+    left: calc(50% - (min(48.062vw,rem(620))));
     width: rem(437);
     height: rem(201);
     background-image: url(../images/common/bg-fish.png);

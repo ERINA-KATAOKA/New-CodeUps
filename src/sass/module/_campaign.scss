@@ -1,13 +1,5 @@
 @use "global" as *;
 
-.campaign {
-  margin-top: rem(44);
-
-  @include mq("md") {
-		margin-top: rem(120);
-  }
-}
-
 .campaign__inner {
   position: relative;
 }
@@ -30,9 +22,10 @@
 }
 
 .campaign__card {
-  width: 100%;
+  width: rem(280);
 
   @include mq("md") {
+    width: rem(333);
   }
 }
 
