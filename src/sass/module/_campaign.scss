@@ -31,6 +31,7 @@
 
 .campaign__button {
   margin-top: rem(29);
+  text-align: center;
 
   @include mq("md") {
 		margin-top: rem(69);

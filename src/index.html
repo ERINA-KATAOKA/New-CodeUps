@@ -37,14 +37,14 @@
   <div class="loading js-loading u-desktop">
     <div class="loading__inner">
       <div class="loading__img-wrap">
-        <div class="loading__img js-loading__img">
+        <div class="loading__img js-loading-img">
           <img src="./assets/images/common/loading-left.jpg" alt="">
         </div>
-        <div class="loading__img js-loading__img">
+        <div class="loading__img js-loading-img">
           <img src="./assets/images/common/loading-right.jpg" alt="">
         </div>
       </div>
-      <div class="loading__title-wrap js-loading__title">
+      <div class="loading__title-wrap js-loading-title">
         <p class="loading__title">diving</p>
         <p class="loading__subtitle">into&nbsp;the&nbsp;ocean</p>
       </div>
@@ -54,9 +54,11 @@
   <header>
     <div class="header js-header">
       <div class="header__inner">
-        <a href="#" class="header__name">
-          <img src="./assets/images/common/site-name.svg" alt="CodeUps">
-        </a>
+        <h1 class="header__name">
+          <a href="#" class="header__link">
+            <img src="./assets/images/common/site-name.svg" alt="CodeUps">
+          </a>
+        </h1>
         <!-- pc-nav -->
         <nav class="header__pc-nav u-desktop">
           <ul class="header__nav-items">
@@ -137,7 +139,6 @@
 
       <!-- sp-nav -->
       <div class="header__sp-nav drawer js-drawer">
-        <div class="drawer__header"></div>
         <div class="drawer__inner">
           <nav class="drawer__nav">
             <ul class="drawer__left">
@@ -288,8 +289,8 @@
         <!-- 前後の矢印 -->
         <div class="swiper-button-prev campaign__card-prev"></div>
         <div class="swiper-button-next campaign__card-next"></div>
-        <div class="campaign__button button">
-          <a href="#" class="button__link"><span>view</span>&nbsp;more</a>
+        <div class="campaign__button">
+          <a href="#" class="button"><span>view</span>&nbsp;more</a>
         </div>
       </div>
     </section>
@@ -314,8 +315,8 @@
             <h3 class="about__title"><span>dive</span>&nbsp;into<br>the&nbsp;<span>ocean</span></h3>
             <div class="about__text-content">
               <p class="about__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-              <div class="about__button button">
-                <a href="#" class="button__link"><span>view</span>&nbsp;more</a>
+              <div class="about__button">
+                <a href="#" class="button"><span>view</span>&nbsp;more</a>
               </div>
             </div>
           </div>
@@ -337,8 +338,8 @@
           <div class="information__content-wrap">
             <h3 class="information__title">ライセンス講習</h3>
             <p class="information__text">当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br>正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
-            <div class="information__button button">
-              <a href="#" class="button__link"><span>view</span>&nbsp;more</a>
+            <div class="information__button">
+              <a href="#" class="button"><span>view</span>&nbsp;more</a>
             </div>
           </div>
         </div>
@@ -390,8 +391,8 @@
             </a>
           </li>
         </ul>
-        <div class="blog__button button">
-          <a href="#" class="button__link"><span>view</span>&nbsp;more</a>
+        <div class="blog__button">
+          <a href="#" class="button"><span>view</span>&nbsp;more</a>
         </div>
       </div>
     </section>
@@ -435,8 +436,8 @@
             <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</p>
           </li>
         </ul>
-        <div class="voice__button button">
-          <a href="#" class="button__link"><span>view</span>&nbsp;more</a>
+        <div class="voice__button">
+          <a href="#" class="button"><span>view</span>&nbsp;more</a>
         </div>
       </div>
     </div>
@@ -450,8 +451,10 @@
         </div>
         <div class="price__body">
           <div class="price__img slide-animation js-slide-animation">
-            <img class="slide-animation__img u-mobile" src="./assets/images/common/price-sp.jpg" alt="ボートが浮かぶ海の様子">
-            <img class="slide-animation__img u-desktop" src="./assets/images/common/price-pc.jpg" alt="ボートが浮かぶ海の様子">
+            <picture class="slide-animation__img">
+              <source srcset="./assets/images/common/price-sp.jpg" alt="たくさんの赤い熱帯魚が泳いでいる様子" media="(max-width: 767px)"/>
+              <img src="./assets/images/common/price-pc.jpg" alt="海に浮かぶカメの様子"/>
+            </picture>
           </div>
           <ul class="price__list-wrap">
             <li class="price__list">
@@ -502,8 +505,8 @@
             </li>
           </ul>
         </div>
-        <div class="price__button button">
-          <a href="#" class="button__link"><span>view</span>&nbsp;more</a>
+        <div class="price__button">
+          <a href="#" class="button"><span>view</span>&nbsp;more</a>
         </div>
       </div>
     </section>
@@ -534,8 +537,8 @@
               <h2 class="section-heading__subtitle section-heading__subtitle--large">お問い合わせ</h2>
             </div>
             <p class="contact__text">ご予約・お問い合わせはコチラ</p>
-            <div class="contact__button button">
-              <a href="#" class="button__link"><span>contact</span>&nbsp;us</a>
+            <div class="contact__button">
+              <a href="#" class="button"><span>contact</span>&nbsp;us</a>
             </div>
           </div>
         </div>

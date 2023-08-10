@@ -1,10 +1,6 @@
 @use "global" as *;
 
-.button {
-  text-align: center;
-}
-
-.button__link::before {
+.button::before {
   position: absolute;
   content: "";
   top: rem(4);
@@ -15,7 +11,7 @@
   z-index: -2;
 }
 
-.button__link::after {
+.button::after {
   position: absolute;
   content: "";
   top: 0;
@@ -29,12 +25,12 @@
   z-index: -1;
 }
 @media(hover: hover) {
-  .button__link:hover::after {
+  .button:hover::after {
     transform: scale(1, 1);
   }
 }
 
-.button__link {
+.button {
   position: relative;
   display: inline-block;
   font-size: rem(14);
@@ -52,18 +48,18 @@
 }
 
 @media(hover: hover) {
-  .button__link:hover {
+  .button:hover {
     color: $accent-color;
     transition: color .2s cubic-bezier(0.45, 0, 0.55, 1);
   }
 }
 
-.button__link span {
+.button span {
   display: inline-block;
   text-transform: capitalize;
 }
 
-.button__link span::after {
+.button span::after {
   position: absolute;
   content: "";
   top: 47%;
@@ -77,7 +73,7 @@
 }
 
 @media(hover: hover) {
-  .button__link:hover span::after {
+  .button:hover span::after {
     background-image: url(../images/common/button-arrow-green.svg);
     transition: background-image .2s cubic-bezier(0.45, 0, 0.55, 1);
   }

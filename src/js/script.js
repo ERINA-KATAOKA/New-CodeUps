@@ -6,14 +6,14 @@ const keyValue = true;
 const openingAnimation = () => {
   const openingTL = gsap.timeline();
   openingTL
-  .fromTo('.js-loading__title',
+  .fromTo('.js-loading-title',
     {clipPath:'inset(100% 0 0 0)',scale:1.1,autoAlpha:0},
     {clipPath:'inset(0% 0 0 0)',scale:1,autoAlpha:1,duration:2,ease:'power4.out',delay:1})
-  .fromTo('.js-loading__img',
+  .fromTo('.js-loading-img',
     {y:'100%'},
     {y:'0%',duration:2,ease:'power4.out',stagger:.1},'-=0.5')
-  .to('.js-loading__title',{autoAlpha:0,duration:.8},'<')
-  .fromTo('.js-loading__title',
+  .to('.js-loading-title',{autoAlpha:0,duration:.8},'<')
+  .fromTo('.js-loading-title',
     {autoAlpha:0,scale:0.9},
     {autoAlpha:1,scale:1,duration:1,ease:'power4.in',color:'#fff'},'-=.5')
   .fromTo('.js-loading',{autoAlpha:1},{autoAlpha:0,duration:1,ease:'power4.in'},'+=2')

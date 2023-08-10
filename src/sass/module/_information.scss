@@ -75,6 +75,7 @@
 
 .information__button {
   margin-top: rem(39);
+  text-align: center;
 
   @include mq("md") {
 		margin-top: rem(40);
