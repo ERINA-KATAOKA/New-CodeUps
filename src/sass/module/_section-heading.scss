@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.section-heading {
-  text-align: center;
-}
-
 .section-heading__title {
   font-size: rem(32);
   font-family: $gotu-font;
@@ -47,7 +43,7 @@
 .section-heading__title.section-heading__title--white,
 .section-heading__title.section-heading__title--white::first-letter,
 .section-heading__subtitle.section-heading__subtitle--white {
-@include mq("md") {
-    color: $white;
-  }
+  @include mq("md") {
+      color: $white;
+    }
 }

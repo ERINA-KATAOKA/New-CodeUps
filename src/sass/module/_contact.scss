@@ -31,6 +31,10 @@
   }
 }
 
+.contact__heading {
+  text-align: center;
+}
+
 .contact__body {
   @include mq("md") {
     display: flex;
