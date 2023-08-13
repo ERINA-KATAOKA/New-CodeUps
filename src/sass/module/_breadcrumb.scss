@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.breadcrumb__items {
+  display: flex;
+}
+
+.breadcrumb__item {
+  position: relative;
+  font-size: rem(14);
+  font-weight: $regular;
+  text-transform: uppercase;
+}
+
+.breadcrumb__item:not(:first-child) {
+  padding-left: rem(20);
+}
+
+.breadcrumb__item:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: rem(7);
+  transform: translateY(-50%);
+  width: rem(6);
+  height: rem(10);
+  background-image: url(../images/common/breadcrumb-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

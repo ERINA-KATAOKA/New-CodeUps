@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.common-tab {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: rem(21);
+  row-gap: rem(16);
+
+  @include mq("md") {
+		column-gap: rem(32);
+  }
+}
+
+.common-tab__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(162);
+  height: rem(34);
+  font-size: rem(14);
+  font-weight: $regular;
+  line-height: calc(22 / 14);
+  text-transform: uppercase;
+  color: $accent-color;
+  background-color: $white;
+  border: rem(1) solid $accent-color;
+  transition: opacity .3s;
+}
+
+.common-tab__item.current {
+  color: $white;
+  background-color: $accent-color;
+  pointer-events: none;
+}
+
+.common-tab__item:not(.current) {
+  cursor: pointer;
+}
+
+.common-tab__item:hover:not(.current) {
+  opacity: .7;
+}

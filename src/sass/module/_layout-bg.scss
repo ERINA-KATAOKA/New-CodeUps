@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.layout-bg {
+  position: relative;
+}
+
+.layout-bg::before {
+  content: "";
+  position: absolute;
+  top: rem(-24);
+  left: rem(15);
+  width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/bg-fish.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: scale(-1, 1);
+  z-index: -20;
+
+  @include mq("md") {
+    top: rem(-70);
+    left: calc(50% - (min(48.062vw,rem(620))));
+    width: rem(301);
+    height: rem(138);
+  }
+}

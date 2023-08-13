@@ -1,0 +1,90 @@
+@use "global" as *;
+
+.common-pagenation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: rem(40);
+}
+
+.common-pagenation__prev,
+.common-pagenation__next {
+  position: relative;
+  width: rem(38);
+  height: rem(38);
+  border: rem(1) solid $accent-color;
+  background-color: $white;
+  transition: background-color .3s;
+  cursor: pointer;
+}
+
+.common-pagenation__prev::before,
+.common-pagenation__next::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: rem(10);
+  height: rem(18);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: content;
+  transition: background-image .3s;
+}
+
+.common-pagenation__prev::before {
+  background-image: url(../images/common/pagenation-prev.svg);
+}
+
+.common-pagenation__next::before {
+  background-image: url(../images/common/pagenation-next.svg);
+}
+
+.common-pagenation__prev:hover,
+.common-pagenation__next:hover {
+  background-color: $accent-color;
+}
+
+.common-pagenation__prev:hover::before {
+  background-image: url(../images/common/pagenation-prev-white.svg);
+}
+
+.common-pagenation__next:hover::before {
+  background-image: url(../images/common/pagenation-next-white.svg);
+}
+
+
+.common-pagenation__items {
+  display: flex;
+  column-gap: rem(12);
+}
+
+.common-pagenation__item {
+  width: rem(38);
+  padding: rem(11) 0;
+  font-size: rem(16);
+  font-family: $lato-font;
+  font-weight: $bold;
+  line-height: 1;
+  text-align: center;
+  color: $accent-color;
+  background-color: $white;
+  border: rem(1) solid $accent-color;
+  transition: color .3s, background-color .3s;
+}
+
+.common-pagenation__item.current {
+  color: $white;
+  background-color: $accent-color;
+  pointer-events: none;
+}
+
+.common-pagenation__item:not(.current) {
+  cursor: pointer;
+}
+
+.common-pagenation__item:not(.current):hover {
+  color: $white;
+  background-color: $accent-color;
+}

@@ -149,5 +149,46 @@ const slider1 = new Swiper ('.js-mv-slider', {
     });
   });
 
+  // campaignタブメニュー
+  $(function() {
+    var campaignTab = $(".common-tab__item");
+    var limit = 4;
+    $(".page-campaign__card").css('display','none');
+    for(var i = 0 ; i < limit ; i++) {
+      var limitCads = $(".page-campaign__card")[i];
+      $(limitCads).fadeIn();
+    }
+    $(campaignTab).click(function(){
+      $(campaignTab).removeClass("current");
+      $(this).addClass("current");
+      if ($(this).hasClass("tab-all")) {
+        $(".page-campaign__card").css('display','none');
+        for(i = 0 ; i < limit ; i++) {
+          limitCads = $(".page-campaign__card")[i];
+          $(limitCads).fadeIn();
+        }
+      } else {
+        $(".page-campaign__card").css('display','none');
+        if ($(this).hasClass("tab-license")) {
+          for(i = 0 ; i < limit ; i++) {
+            limitCads = $(".page-campaign__card.license")[i];
+            $(limitCads).fadeIn();
+          }
+        } else if ($(this).hasClass("tab-fan")) {
+          for(i = 0 ; i < limit ; i++) {
+            limitCads = $(".page-campaign__card.fan")[i];
+            $(limitCads).fadeIn();
+          }
+        } else if ($(this).hasClass("tab-experience")) {
+          for(i = 0 ; i < limit ; i++) {
+            limitCads = $(".page-campaign__card.experience")[i];
+            $(limitCads).fadeIn();
+          }
+        }
+      }
+    });
+  });
+
+  
 
 });

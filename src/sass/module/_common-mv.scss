@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.common-mv {
+  position: relative;
+  width: 100%;
+}
+
+.common-mv__img img{
+  width: 100%;
+  aspect-ratio: 375 / 460;
+  object-fit: cover;
+
+  @include mq("md") {
+		aspect-ratio: 1440 / 548;
+  }
+}
+
+.common-mv__title-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  @include mq("md") {
+		top: 59%;
+  }
+}
+
+.common-mv__title {
+  font-size: rem(40);
+  font-family: $lato-font;
+  font-weight: $regular;
+  color: $white;
+  text-transform: capitalize;
+
+  @include mq("md") {
+		font-size: rem(80);
+  }
+}
