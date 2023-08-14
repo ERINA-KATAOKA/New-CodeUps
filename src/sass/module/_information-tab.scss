@@ -1,0 +1,112 @@
+@use "global" as *;
+
+.information-tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(19);
+
+  @include mq("md") {
+    flex-wrap: nowrap;
+		gap: rem(90);
+  }
+}
+
+.information-tab__item {
+  padding: rem(9) 0;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  width: rem(102);
+  font-size: rem(14);
+  color: $accent-color;
+  text-align: center;
+  background-color: $bg-green;
+  box-shadow: rem(2) rem(2) rem(4) rgba($color: #000000, $alpha: 0.25);
+  transition: opacity .3s, color .3s, background-color .3s;
+  cursor: pointer;
+
+  @include mq("md") {
+    padding-top: rem(18);
+    padding-bottom: rem(18);
+		font-size: rem(24);
+    width: rem(300);
+  }
+}
+
+.information-tab__item.current {
+  color: $white;
+  background-color: $accent-color;
+  pointer-events: none;
+}
+
+.information-tab__item span {
+
+  @include mq("md") {
+    position: relative;
+    padding-left: rem(72);
+  }
+}
+
+.information-tab__item span::before {
+
+  @include mq("md") {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: rem(64);
+    height: rem(64);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: background-img .3s;
+  }
+}
+
+.information-tab__item:nth-child(1) span::before {
+
+  @include mq("md") {
+    background-image: url(../images/common/icon1-green.png);
+  }
+}
+
+.information-tab__item:nth-child(2) span::before {
+
+  @include mq("md") {
+    background-image: url(../images/common/icon2-green.png);
+  }
+}
+
+.information-tab__item:nth-child(3) span::before {
+
+  @include mq("md") {
+    background-image: url(../images/common/icon3-green.png);
+  }
+}
+
+.information-tab__item:nth-child(1).current span::before {
+
+  @include mq("md") {
+    background-image: url(../images/common/icon1-white.png);
+  }
+}
+.information-tab__item:nth-child(2).current span::before {
+
+  @include mq("md") {
+    background-image: url(../images/common/icon2-white.png);
+  }
+}
+.information-tab__item:nth-child(3).current span::before {
+
+  @include mq("md") {
+    background-image: url(../images/common/icon3-white.png);
+  }
+}
+
+@media(hover: hover) {
+  .information-tab__item:hover:not(.current) {
+    opacity: .7;
+  }
+}
+

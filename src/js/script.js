@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 // ヘッダー背景変更
 $(window).on('scroll', function () {
-  if ($('.mv').height() < $(this).scrollTop()) {
+  if ($('.js-mv').height() < $(this).scrollTop()) {
       $('.js-header').addClass('change-color');
 } else {
       $('.js-header').removeClass('change-color');
@@ -149,39 +149,40 @@ const slider1 = new Swiper ('.js-mv-slider', {
     });
   });
 
+
   // campaignタブメニュー
   $(function() {
-    var campaignTab = $(".common-tab__item");
+    var campaignTab = $(".js-campaign-tab-item");
     var limit = 4;
-    $(".page-campaign__card").css('display','none');
+    $(".js-campaign-tab-content").css('display','none');
     for(var i = 0 ; i < limit ; i++) {
-      var limitCads = $(".page-campaign__card")[i];
+      var limitCads = $(".js-campaign-tab-content")[i];
       $(limitCads).fadeIn();
     }
     $(campaignTab).click(function(){
       $(campaignTab).removeClass("current");
       $(this).addClass("current");
       if ($(this).hasClass("tab-all")) {
-        $(".page-campaign__card").css('display','none');
+        $(".js-campaign-tab-content").css('display','none');
         for(i = 0 ; i < limit ; i++) {
-          limitCads = $(".page-campaign__card")[i];
+          limitCads = $(".js-campaign-tab-content")[i];
           $(limitCads).fadeIn();
         }
       } else {
-        $(".page-campaign__card").css('display','none');
+        $(".js-campaign-tab-content").css('display','none');
         if ($(this).hasClass("tab-license")) {
           for(i = 0 ; i < limit ; i++) {
-            limitCads = $(".page-campaign__card.license")[i];
+            limitCads = $(".js-campaign-tab-content.license")[i];
             $(limitCads).fadeIn();
           }
         } else if ($(this).hasClass("tab-fan")) {
           for(i = 0 ; i < limit ; i++) {
-            limitCads = $(".page-campaign__card.fan")[i];
+            limitCads = $(".js-campaign-tab-content.fan")[i];
             $(limitCads).fadeIn();
           }
         } else if ($(this).hasClass("tab-experience")) {
           for(i = 0 ; i < limit ; i++) {
-            limitCads = $(".page-campaign__card.experience")[i];
+            limitCads = $(".js-campaign-tab-content.experience")[i];
             $(limitCads).fadeIn();
           }
         }
@@ -189,6 +190,110 @@ const slider1 = new Swiper ('.js-mv-slider', {
     });
   });
 
-  
+
+  // モーダル
+  $(function() {
+    const open = $(".js-modal-open"),
+      close = $(".js-modal-close"),
+      modal = $(".js-modal"),
+      modalImg = $(".js-modal-img");
+
+    //開くボタンをクリックしたら
+    open.on("click", function () {
+      // クリックされた画像を取得
+      var clickedImgSrc = $(this).attr("src");
+      // モーダル内の画像を設定
+      modalImg.attr("src", clickedImgSrc);
+      // モーダルを表示する
+      modal.addClass("is-open");
+    });
+
+    //閉じるボタンをクリックしたらモーダルを閉じる
+    close.add(modal).on("click", function () {
+      modal.removeClass("is-open");
+    });
+  });
+
+
+  // informationタブメニュー
+  $(function() {
+    var informationTab = $(".js-information-tab-item");
+    var limit = 1;
+    $(".js-information-tab-content").css('display','none');
+    for(var i = 0 ; i < limit ; i++) {
+      var limitCads = $(".js-information-tab-content")[i];
+      $(limitCads).fadeIn();
+    }
+    $(informationTab).click(function(){
+      $(informationTab).removeClass("current");
+      $(this).addClass("current");
+      if ($(this).hasClass("tab-all")) {
+        $(".js-information-tab-content").css('display','none');
+        for(i = 0 ; i < limit ; i++) {
+          limitCads = $(".js-information-tab-content")[i];
+          $(limitCads).fadeIn();
+        }
+      } else {
+        $(".js-information-tab-content").css('display','none');
+        if ($(this).hasClass("tab-license")) {
+          for(i = 0 ; i < limit ; i++) {
+            limitCads = $(".js-information-tab-content.license")[i];
+            $(limitCads).fadeIn();
+          }
+        } else if ($(this).hasClass("tab-fan")) {
+          for(i = 0 ; i < limit ; i++) {
+            limitCads = $(".js-information-tab-content.fan")[i];
+            $(limitCads).fadeIn();
+          }
+        } else if ($(this).hasClass("tab-experience")) {
+          for(i = 0 ; i < limit ; i++) {
+            limitCads = $(".js-information-tab-content.experience")[i];
+            $(limitCads).fadeIn();
+          }
+        }
+      }
+    });
+  });
+
+  // voiceタブメニュー
+  $(function() {
+    var voiceTab = $(".js-voice-tab-item");
+    var limit = 6;
+    $(".js-voice-tab-content").css('display','none');
+    for(var i = 0 ; i < limit ; i++) {
+      var limitCads = $(".js-voice-tab-content")[i];
+      $(limitCads).fadeIn();
+    }
+    $(voiceTab).click(function(){
+      $(voiceTab).removeClass("current");
+      $(this).addClass("current");
+      if ($(this).hasClass("tab-all")) {
+        $(".js-voice-tab-content").css('display','none');
+        for(i = 0 ; i < limit ; i++) {
+          limitCads = $(".js-voice-tab-content")[i];
+          $(limitCads).fadeIn();
+        }
+      } else {
+        $(".js-voice-tab-content").css('display','none');
+        if ($(this).hasClass("tab-license")) {
+          for(i = 0 ; i < limit ; i++) {
+            limitCads = $(".js-voice-tab-content.license")[i];
+            $(limitCads).fadeIn();
+          }
+        } else if ($(this).hasClass("tab-fan")) {
+          for(i = 0 ; i < limit ; i++) {
+            limitCads = $(".js-voice-tab-content.fan")[i];
+            $(limitCads).fadeIn();
+          }
+        } else if ($(this).hasClass("tab-experience")) {
+          for(i = 0 ; i < limit ; i++) {
+            limitCads = $(".js-voice-tab-content.experience")[i];
+            $(limitCads).fadeIn();
+          }
+        }
+      }
+    });
+  });
+
 
 });

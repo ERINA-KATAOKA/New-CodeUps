@@ -131,7 +131,7 @@
               <li class="drawer__item"><a href="#">ナイトダイビング</a></li>
               <!-- <li class="drawer__item"><a href="#">貸切ファンダイビング</a></li> -->
               <li class="drawer__title"><a href="page-about.html">私たちについて</a></li>
-              <li class="drawer__title"><a href="page-information.html">ダイビング情報</a></li>
+              <li class="drawer__title"><a href="#">ダイビング情報</a></li>
               <li class="drawer__item"><a href="#">ライセンス講習</a></li>
               <li class="drawer__item"><a href="#">体験ダイビング</a></li>
               <li class="drawer__item"><a href="#">ファンダイビング</a></li>
@@ -157,144 +157,72 @@
   </header>
 
   <main>
-    <div class="page-campaign-mv page-mv js-mv">
+    <!-- mv -->
+    <div class="page-information-mv page-mv js-mv">
       <div class="page-mv__inner">
         <picture class="page-mv__img">
-          <source srcset="./assets/images/common/mv-campaign-sp.jpg" media="(max-width: 767px)"/>
-          <img src="./assets/images/common/mv-campaign-pc.jpg" alt="2匹の黄色い熱帯魚が泳いでいる様子"/>
+          <source srcset="./assets/images/common/mv-information-sp.jpg" media="(max-width: 767px)"/>
+          <img src="./assets/images/common/mv-information-pc.jpg" alt="たくさんの熱帯魚が泳ぐ海底をダイバーが泳いでいる様子"/>
         </picture>
         <div class="page-mv__title-wrapper">
-          <h2 class="page-mv__title">campaign</h2>
+          <h2 class="page-mv__title">information</h2>
         </div>
       </div>
     </div>
 
     <!-- パンくず -->
-    <div class="page-campaign-breadcrumb breadcrumb layout-breadcrumb">
+    <div class="page-information-breadcrumb breadcrumb layout-breadcrumb">
       <div class="breadcrumb__inner inner">
         <ul class="breadcrumb__items">
           <li class="breadcrumb__item">
             <a href="index.html">top</a>
           </li>
           <li class="breadcrumb__item">
-            <p>キャンペーン</p>
+            <p>ダイビング情報</p>
           </li>
         </ul>
       </div>
     </div>
 
-    <!-- campaign -->
-    <section class="page-campaign layout-page">
-      <div class="page-campaign__inner inner layout-bg">
-        <ul class="page-campaign__tab common-tab">
-          <li class="common-tab__item js-campaign-tab-item tab-all current">all</li>
-          <li class="common-tab__item js-campaign-tab-item tab-license">ライセンス講習</li>
-          <li class="common-tab__item js-campaign-tab-item tab-fan">ファンダイビング</li>
-          <li class="common-tab__item js-campaign-tab-item tab-experience">体験ダイビング</li>
-        </ul>
-        <ul class="page-campaign__tub-contents layout-tab-contens">
-          <li class="page-campaign__card campaign-card js-campaign-tab-content license">
-            <div class="campaign-card__img">
-              <img src="./assets/images/common/campaign1.jpg" alt="たくさんのカラフルな熱帯魚が泳いでいる様子">
-            </div>
-            <div class="campaign-card__body campaign-card__body--padding">
-              <p class="campaign-card__label">ライセンス講習</p>
-              <h3 class="campaign-card__title campaign-card__title--large">ライセンス取得</h3>
-              <p class="campaign-card__text campaign-card__text--margin">全部コミコミ(お一人様)</p>
-              <div class="campaign-card__price-wrap">
-                <p class="campaign-card__del-price"><del>&#165;56,000</del></p>
-                <p class="campaign-card__price campaign-card__price--margin">&#165;46,000</p>
-              </div>
-              <div class="campaign-card__detail card-detail u-desktop">
-                <p class="card-detail__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                <p class="card-detail__period">2023/6/1-9/30</p>
-                <p class="card-detail__cotact-text">ご予約・お問い合わせはコチラ</p>
-                <div class="card-detail__button">
-                  <a href="#" class="button"><span>contact</span>&nbsp;us</a>
-                </div>
-              </div>
-            </div>
+    <!-- page-information -->
+    <section class="page-information layout-page">
+      <div class="page-information__inner inner layout-bg">
+        <ul class="page-information__tab information-tab">
+          <li class="information-tab__item js-information-tab-item tab-license current">
+            <span>ライセンス<br class="u-mobile">講習</span>
           </li>
-          <li class="page-campaign__card campaign-card js-campaign-tab-content experience">
-            <div class="campaign-card__img">
-              <img src="./assets/images/common/campaign2.jpg" alt="広い海に貸切のボートが浮かんでいる様子">
-            </div>
-            <div class="campaign-card__body campaign-card__body--padding">
-              <p class="campaign-card__label">体験ダイビング</p>
-              <h3 class="campaign-card__title campaign-card__title--large">貸切体験ダイビング</h3>
-              <p class="campaign-card__text campaign-card__text--margin">全部コミコミ(お一人様)</p>
-              <div class="campaign-card__price-wrap">
-                <p class="campaign-card__del-price"><del>&#165;24,000</del></p>
-                <p class="campaign-card__price campaign-card__price--margin">&#165;18,000</p>
-              </div>
-              <div class="campaign-card__detail card-detail u-desktop">
-                <p class="card-detail__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                <p class="card-detail__period">2023/6/1-9/30</p>
-                <p class="card-detail__cotact-text">ご予約・お問い合わせはコチラ</p>
-                <div class="card-detail__button">
-                  <a href="#" class="button"><span>contact</span>&nbsp;us</a>
-                </div>
-              </div>
-            </div>
+          <li class="information-tab__item js-information-tab-item tab-fan">
+            <span>ファン<br class="u-mobile">ダイビング</span>
           </li>
-          <li class="page-campaign__card campaign-card js-campaign-tab-content experience">
-            <div class="campaign-card__img">
-              <img src="./assets/images/common/campaign3.jpg" alt="たくさんの綺麗なクラゲが泳いでいる様子">
-            </div>
-            <div class="campaign-card__body campaign-card__body--padding">
-              <p class="campaign-card__label">体験ダイビング</p>
-              <h3 class="campaign-card__title campaign-card__title--large">ナイトダイビング</h3>
-              <p class="campaign-card__text campaign-card__text--margin">全部コミコミ(お一人様)</p>
-              <div class="campaign-card__price-wrap">
-                <p class="campaign-card__del-price"><del>&#165;10,000</del></p>
-                <p class="campaign-card__price campaign-card__price--margin">&#165;8,000</p>
-              </div>
-              <div class="campaign-card__detail card-detail u-desktop">
-                <p class="card-detail__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                <p class="card-detail__period">2023/6/1-9/30</p>
-                <p class="card-detail__cotact-text">ご予約・お問い合わせはコチラ</p>
-                <div class="card-detail__button">
-                  <a href="#" class="button"><span>contact</span>&nbsp;us</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="page-campaign__card campaign-card js-campaign-tab-content fan">
-            <div class="campaign-card__img">
-              <img src="./assets/images/common/campaign4.jpg" alt="広い海3人が貸切ファンダイビングを体験している様子">
-            </div>
-            <div class="campaign-card__body campaign-card__body--padding">
-              <p class="campaign-card__label">ファンダイビング</p>
-              <h3 class="campaign-card__title campaign-card__title--large">貸切ファンダイビング</h3>
-              <p class="campaign-card__text campaign-card__text--margin">全部コミコミ(お一人様)</p>
-              <div class="campaign-card__price-wrap">
-                <p class="campaign-card__del-price"><del>&#165;20,000</del></p>
-                <p class="campaign-card__price campaign-card__price--margin">&#165;16,000</p>
-              </div>
-              <div class="campaign-card__detail card-detail u-desktop">
-                <p class="card-detail__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                <p class="card-detail__period">2023/6/1-9/30</p>
-                <p class="card-detail__cotact-text">ご予約・お問い合わせはコチラ</p>
-                <div class="card-detail__button">
-                  <a href="#" class="button"><span>contact</span>&nbsp;us</a>
-                </div>
-              </div>
-            </div>
+          <li class="information-tab__item js-information-tab-item tab-experience">
+            <span>体験<br class="u-mobile">ダイビング</span>
           </li>
         </ul>
-        <div class="page-campaign__pagenation common-pagenation layout-pagenation">
-          <div class="common-pagenation__prev"></div>
-          <ul class="common-pagenation__items">
-            <li class="common-pagenation__item current">1</li>
-            <li class="common-pagenation__item">2</li>
-            <li class="common-pagenation__item">3</li>
-            <li class="common-pagenation__item">4</li>
-            <li class="common-pagenation__item u-desktop">5</li>
-            <li class="common-pagenation__item u-desktop">6</li>
-          </ul>
-          <div class="common-pagenation__next"></div>
-        </div>
+        <ul class="page-information__tab-contents">
+          <li class="page-information__card information-card js-information-tab-content license">
+            <div class="information-card__text-content">
+              <h3 class="information-card__title">ライセンス講習</h3>
+              <p class="information-card__text">泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！</p>
+            </div>
+            <img class="information-card__img" src="./assets/images/common/information02.jpg" alt="5人のダイバーが講習を受けている様子">
+          </li>
+          <li class="page-information__card information-card js-information-tab-content fan">
+            <div class="information-card__text-content">
+              <h3 class="information-card__title">ファンダイビング</h3>
+              <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！</p>
+            </div>
+            <img class="information-card__img" src="./assets/images/common/information01.jpg" alt="5人のダイバーが講習を受けている様子">
+          </li>
+          <li class="page-information__card information-card js-information-tab-content experience">
+            <div class="information-card__text-content">
+              <h3 class="information-card__title">体験ダイビング</h3>
+              <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！</p>
+            </div>
+            <img class="information-card__img" src="./assets/images/common/information03.jpg" alt="5人のダイバーが講習を受けている様子">
+          </li>
+        </ul>
       </div>
+
     </section>
 
     <!-- contact -->
@@ -383,7 +311,7 @@
             <ul class="footer__right-bottom">
               <li class="footer__title"><a href="page-faq.html">よくある質問</a></li>
               <li class="footer__title"><a href="page-privacy-policy.html">プライバシー<br class="u-mobile">ポリシー</a></li>
-              <li class="footer__title"><a href="page-terms">利用規約</a></li>
+              <li class="footer__title"><a href="page-terms.html">利用規約</a></li>
               <li class="footer__title"><a href="page-contact.html">お問い合わせ</a></li>
               <!-- <li class="footer__title"><a href="#">サイトマップ</a></li> -->
             </ul>

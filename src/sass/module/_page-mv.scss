@@ -1,11 +1,11 @@
 @use "global" as *;
 
-.common-mv {
+.page-mv {
   position: relative;
   width: 100%;
 }
 
-.common-mv__img img{
+.page-mv__img img{
   width: 100%;
   aspect-ratio: 375 / 460;
   object-fit: cover;
@@ -15,7 +15,7 @@
   }
 }
 
-.common-mv__title-wrapper {
+.page-mv__title-wrapper {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -26,7 +26,7 @@
   }
 }
 
-.common-mv__title {
+.page-mv__title {
   font-size: rem(40);
   font-family: $lato-font;
   font-weight: $regular;
@@ -36,4 +36,8 @@
   @include mq("md") {
 		font-size: rem(80);
   }
+}
+
+.page-mv__title span {
+  text-transform: lowercase;
 }

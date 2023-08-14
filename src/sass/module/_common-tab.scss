@@ -37,6 +37,8 @@
   cursor: pointer;
 }
 
-.common-tab__item:hover:not(.current) {
-  opacity: .7;
+@media(hover: hover) {
+  .common-tab__item:hover:not(.current) {
+    opacity: .7;
+  }
 }

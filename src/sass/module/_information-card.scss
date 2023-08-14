@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.information-card {
+  width: 100%;
+  padding: rem(24);
+  border: rem(1) solid $accent-color;
+
+  @include mq("md") {
+    display: flex;
+    gap: rem(48);
+    align-items: center;
+    border: rem(2) solid $accent-color;
+  }
+}
+
+.information-card__title {
+  padding-bottom: rem(8);
+  font-size: rem(24);
+  font-weight: $bold;
+  line-height: calc(24 / 24);
+  border-bottom: rem(1) solid $accent-color;
+
+  @include mq("md") {
+		font-weight: $bold;
+  }
+}
+
+.information-card__text-content {
+  @include mq("md") {
+		width: 50%;
+  }
+}
+
+.information-card__text {
+  margin-top: rem(8);
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(24 / 16);
+}
+
+.information-card__img {
+  margin-top: rem(8);
+  aspect-ratio: 297 / 189;
+  object-fit: cover;
+
+  @include mq("md") {
+    margin-top: 0;
+		width: 50%;
+  }
+}

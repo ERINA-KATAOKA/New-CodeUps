@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .page-campaign__tub-contents {
-  margin-top: rem(40);
   padding-right: rem(32);
   padding-left: rem(32);
   display: grid;
@@ -14,8 +13,4 @@
     column-gap: rem(40);
     row-gap: rem(80);
   }
-}
-
-.page-campaign__pagenation {
-  margin-top: rem(80);
 }
