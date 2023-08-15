@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.text-content {
+  margin: 0 auto;
+  max-width: rem(800);
+}
+
+.text-content__body {
+  margin-top: rem(40);
+  font-size: rem(16);
+  line-height: calc(32 / 16);
+}
+
+.text-content__number-list {
+  list-style-type: number;
+  list-style-position: inside;
+}
+
+.text-content__title {
+  font-size: rem(24);
+  font-weight: $medium;
+  
+
+  @include mq("md") {
+		font-size: rem(32);
+  }
+}
+
+.text-content__list,
+.text-content__item:not(:first-child),
+.text-content__text:not(:first-child) {
+  margin-top: rem(40);
+}
