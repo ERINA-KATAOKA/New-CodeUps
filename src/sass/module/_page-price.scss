@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.page-price__list-wrap {
+  max-width: rem(700);
+  margin: 0 auto;
+}
+
+.page-price__list {
+
+  @include mq("md") {
+		display: flex;
+    width: 100%;
+  }
+}
+
+.page-price__list:not(:first-child) {
+  margin-top: rem(40);
+
+  @include mq("md") {
+		margin-top: rem(80);
+  }
+}
+
+.page-price__list-title {
+  padding: rem(7) 0;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(24 / 16);
+  text-align: center;
+  color: $white;
+  background-color: $accent-color;
+
+  @include mq("md") {
+    width: 28.57142%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.page-price__list-title span {
+  position: relative;
+  padding-left: rem(32);
+
+  @include mq("md") {
+		padding-left: 0;
+    padding-bottom: rem(72);
+  }
+}
+
+.page-price__list-title span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: rem(24);
+  height: rem(24);
+  background-image: url(../images/common/icon1-white.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include mq("md") {
+		width: rem(64);
+    height: rem(64);
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+  }
+}
+
+.page-price__list-item {
+  display: grid;
+  grid-template-columns: 1fr .44166fr;
+  grid-auto-rows: rem(60);
+  // border: rem(1) solid $accent-color;
+
+  @include mq("md") {
+		width: 71.42858%;
+    grid-template-columns: 1fr .47647fr;
+  }
+}
+
+.page-price__list-item dt,
+.page-price__list-item dd {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 0 rem(16);
+  align-items: center;
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(24 / 16);
+}
+
+.page-price__list-item dt {
+  justify-content: center;
+  text-align: center;
+  border-right: rem(1) solid $accent-color;
+  border-left: rem(1) solid $accent-color;
+  border-bottom: rem(1) solid $accent-color;
+}
+
+.page-price__list-item dd {
+  justify-content: end;
+  border-right: rem(1) solid $accent-color;
+  border-bottom: rem(1) solid $accent-color;
+}
+
+.page-price__list-item dt:first-of-type,
+.page-price__list-item dd:first-of-type {
+  border-top: rem(1) solid $accent-color;
+}
