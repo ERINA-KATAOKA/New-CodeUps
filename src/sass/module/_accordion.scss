@@ -1,0 +1,74 @@
+@use "global" as *;
+
+.accordion__items {
+  max-width: rem(700);
+  margin: 0 auto;
+}
+
+.accordion__item:not(:first-child) {
+  margin-top: rem(40);
+}
+
+.accordion__title {
+  position: relative;
+  width: 100%;
+  padding: rem(16);
+  font-size: rem(16);
+  font-weight: $regular;
+  color: $white;
+  background-color: $accent-color;
+  cursor: pointer;
+  transition: opacity .3s;
+
+  @include mq("md") {
+    padding: rem(25) rem(40);
+		font-size: rem(20);
+  }
+}
+
+.accordion__title::before,
+.accordion__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(16);
+  width: rem(32);
+  height: rem(1);
+  background-color: $white;
+
+  @include mq("md") {
+		right: rem(40);
+  }
+}
+
+.accordion__title::after {
+  transform: rotate(-90deg);
+  transition: transform .3s;
+}
+
+@media(hover: hover) {
+  .accordion__title:hover {
+    opacity: .7;
+  }
+}
+
+.accordion__title.is-open::after {
+  transform: rotate(0);
+}
+
+.accordion__content {
+  display: none;
+  width: 100%;
+  padding: rem(24) rem(16);
+  border: rem(1) solid $accent-color;
+
+  @include mq("md") {
+		margin-top: rem(16);
+    padding: rem(40);
+  }
+}
+
+.accordion__content p {
+  font-size: rem(16);
+  font-weight: $regular;
+}

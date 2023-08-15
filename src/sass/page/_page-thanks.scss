@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.page-thanks__title,
+.page-thanks__text {
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(18 / 16);
+  text-align: center;
+}
+
+.page-thanks__text {
+  margin-top: rem(40);
+  line-height: 1.5;
+}

@@ -295,5 +295,20 @@ const slider1 = new Swiper ('.js-mv-slider', {
     });
   });
 
+  // アコーディオン
+  $(function () {
+    // 最初のコンテンツは表示
+    $(".js-accordion-item:first-of-type .js-accordion-content").css("display", "block");
+    // 最初の矢印は開いた時の状態に
+    $(".js-accordion-item:first-of-type .js-accordion-title").addClass("is-open");
+    // タイトルをクリックすると
+    $(".js-accordion-title").on("click", function () {
+      // クリックした次の要素を開閉
+      $(this).next().slideToggle(300);
+      // タイトルにopenクラスを付け外しして+-を変更
+      $(this).toggleClass("is-open", 300);
+    });
+  });
+
 
 });
