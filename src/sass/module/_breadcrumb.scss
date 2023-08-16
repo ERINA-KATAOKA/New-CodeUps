@@ -11,6 +11,10 @@
   text-transform: uppercase;
 }
 
+.breadcrumb__items.breadcrumb__items--white {
+  color: $white;
+}
+
 .breadcrumb__item:not(:first-child) {
   padding-left: rem(20);
 }
@@ -27,4 +31,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.breadcrumb__item.breadcrumb__item--white:not(:first-child)::before {
+  background-image: url(../images/common/breadcrumb-arrow-white.svg);
 }

@@ -11,6 +11,10 @@
   z-index: -2;
 }
 
+.button.button--white::before {
+  border: rem(1) solid $white;
+}
+
 .button::after {
   position: absolute;
   content: "";
@@ -24,6 +28,11 @@
   transition: all .2s cubic-bezier(0.45, 0, 0.55, 1);
   z-index: -1;
 }
+
+.button.button--white::after {
+  background-color: $accent-color;
+}
+
 @media(hover: hover) {
   .button:hover::after {
     transform: scale(1, 1);
@@ -47,10 +56,21 @@
   z-index: 1;
 }
 
+.button.button--white {
+  color: $accent-color;
+  border: rem(1) solid $white;
+  background-color: $white;
+}
+
 @media(hover: hover) {
   .button:hover {
     color: $accent-color;
     transition: color .2s cubic-bezier(0.45, 0, 0.55, 1);
+  }
+}
+@media(hover: hover) {
+  .button.button--white:hover {
+    color: $white;
   }
 }
 
@@ -72,9 +92,19 @@
   background-size: contain;
 }
 
+.button.button--white span::after {
+  background-image: url(../images/common/button-arrow-green.svg);
+}
+
 @media(hover: hover) {
   .button:hover span::after {
     background-image: url(../images/common/button-arrow-green.svg);
     transition: background-image .2s cubic-bezier(0.45, 0, 0.55, 1);
+  }
+}
+
+@media(hover: hover) {
+  .button.button--white:hover span::after {
+    background-image: url(../images/common/button-arrow.svg);
   }
 }

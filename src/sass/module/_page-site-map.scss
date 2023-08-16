@@ -1,0 +1,79 @@
+@use "global" as *;
+
+.page-site-map__nav {
+  max-width: rem(500);
+  display: flex;
+  justify-content: space-between;
+
+  @include mq("md") {
+    max-width: 100%;
+  }
+}
+
+.page-site-map__left,
+.page-site-map__right {
+  @include mq("md") {
+		display: contents;
+  }
+}
+
+.page-site-map__right {
+  margin-left: rem(18);
+}
+
+.page-site-map__title {
+  position: relative;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(18 / 16);
+  transition: opacity .3s;
+}
+
+.page-site-map__title::before {
+  position: absolute;
+  content: "";
+  top: rem(12);
+  left: 0;
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/nav-point-black.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: opacity .3s;
+}
+
+.page-site-map__item {
+  font-size: rem(16);
+  line-height: calc(18 / 16);
+  transition: opacity .3s;
+}
+
+.page-site-map__title a,
+.page-site-map__item a {
+  display: inline-block;
+  width: 100%;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
+  padding-left: rem(22);
+}
+
+.page-site-map__title:not(:first-child) {
+  margin-top: rem(16);
+}
+
+.page-site-map__left-bottom,
+.page-site-map__right-bottom {
+  margin-top: rem(16);
+
+  @include mq("md") {
+		margin-top: 0;
+  }
+}
+
+@media(hover: hover) {
+  .page-site-map__title:hover,
+  .page-site-map__item:hover {
+    opacity: 0.7;
+  }
+}
