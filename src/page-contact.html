@@ -186,6 +186,107 @@
     <!-- contat -->
     <section class="page-contact layout-page">
       <div class="page-contact__inner inner layout-bg">
+        <form class="page-contact__form form" action="page-thanks.html" method="post">
+          <p class="form__error-message">※必須項目が入力されていません。入力してください。</p>
+          <ul class="form__list">
+            <li class="form__item">
+              <dl>
+                <dt class="form__label">
+                  <p class="form__label-text">お名前<span>必須</span></p>
+                </dt>
+                <dd class="form__input">
+                  <input class="form__input-text" type="text" name="お名前" placeholder="沖縄&emsp;太郎" required>
+                </dd>
+              </dl>
+            </li>
+            <li class="form__item">
+              <dl>
+                <dt class="form__label">
+                  <p class="form__label-text">メールアドレス<span>必須</span></p>
+                </dt>
+                <dd class="form__input">
+                  <input class="form__input-text" type="email" name="メールアドレス" placeholder="aaa000@ggmail.com" required>
+                </dd>
+              </dl>
+            </li>
+            <li class="form__item">
+              <dl>
+                <dt class="form__label">
+                  <p class="form__label-text">電話番号<span>必須</span></p>
+                </dt>
+                <dd class="form__input">
+                  <input class="form__input-text" type="tel" name="電話番号" placeholder="000-0000-0000" required>
+                </dd>
+              </dl>
+            </li>
+            <li class="form__item">
+              <dl>
+                <dt class="form__label">
+                  <p class="form__label-text">お問い合せ項目<span>必須</span></p>
+                </dt>
+                <dd class="form__radio">
+                  <label>
+                    <input type="radio" class="form__radio-input" name="お問い合せ項目" value="ダイビング講習について" checked>
+                    <span class="form__radio-text">ダイビング講習について</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="form__radio-input" name="お問い合せ項目" value="ファンダイビングについて">
+                    <span class="form__radio-text">ファンダイビングについて</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="form__radio-input" name="お問い合せ項目" value="体験ダイビングについて">
+                    <span class="form__radio-text">体験ダイビングについて</span>
+                  </label>
+                  <label>
+                    <input type="radio" class="form__radio-input" name="お問い合せ項目" value="スペシャルダイビングについて">
+                    <span class="form__radio-text">スペシャルダイビングについて</span>
+                  </label>
+                </dd>
+              </dl>
+            </li>
+            <li class="form__item">
+              <dl>
+                <dt class="form__label">
+                  <p class="form__label-text">キャンペーン</p>
+                </dt>
+                <dd class="form__select">
+                  <select class="form__select-text" name="キャンペーン" size="1">
+                    <option value="" disabled selected>キャンペーン内容を選択</option>
+                    <option value="ライセンス取得">ライセンス取得</option>
+                    <option value="貸切体験ダイビング">貸切体験ダイビング</option>
+                    <option value="ナイトダイビング">ナイトダイビング</option>
+                    <option value="貸切ファンダイビング">貸切ファンダイビング</option>
+                  </select>
+                </dd>
+              </dl>
+            </li>
+            <li class="form__item">
+              <dl>
+                <dt class="form__label">
+                  <p class="form__label-text">お問い合わせ内容<span>必須</span></p>
+                </dt>
+                <dd class="form__textarea">
+                  <textarea class="form__textarea-text" name="お問い合わせ内容" placeholder="" required></textarea>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <div class="form__privacy">
+            <div class="form__checkbox">
+              <label>
+                <input class="form__check-input" type="checkbox" name="個人情報の取り扱いについて同意のうえ送信します。" required>
+                <span class="form__check-text">個人情報の取り扱いについて同意のうえ送信します。</span>
+              </label>
+            </div>
+          </div>
+          <div class="form__button">
+            <div class="button button--contact">
+              <span>
+                <input class="form__button-submit" type="submit" value="send">
+              </span>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
   </main>
@@ -226,6 +327,7 @@
               <li class="footer__item"><a href="#">ライセンス講習</a></li>
               <li class="footer__item"><a href="#">体験ダイビング</a></li>
               <li class="footer__item"><a href="#">ファンダイビング</a></li>
+              <!-- <li class="footer__item"><a href="#">スペシャルダイビング</a></li> -->
               <li class="footer__title"><a href="page-blog.html">ブログ</a></li>
             </ul>
           </div>

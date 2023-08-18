@@ -56,6 +56,11 @@
   z-index: 1;
 }
 
+.button.button--contact {
+  padding-right: rem(112);
+  padding-left: rem(56);
+}
+
 .button.button--white {
   color: $accent-color;
   border: rem(1) solid $white;
@@ -74,9 +79,8 @@
   }
 }
 
-.button span {
-  display: inline-block;
-  text-transform: capitalize;
+.button::first-letter {
+  text-transform: uppercase;
 }
 
 .button span::after {

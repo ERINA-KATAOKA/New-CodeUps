@@ -74,6 +74,7 @@
   @include mq("md") {
     max-width: 100%;
 		margin-top: rem(12);
+    gap: rem(120);
     justify-content: start;
   }
 }
@@ -81,23 +82,12 @@
 .footer__left,
 .footer__right {
   @include mq("md") {
-		display: flex;
+		display: contents;
   }
 }
 
 .footer__right {
   margin-left: rem(18);
-
-  @include mq("md") {
-		margin-left: rem(120);
-  }
-}
-
-.footer__left-bottom,
-.footer__right-bottom {
-  @include mq("md") {
-		margin-left: rem(120);
-  }
 }
 
 .footer__title {

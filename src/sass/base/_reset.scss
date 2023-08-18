@@ -96,7 +96,8 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-  display: none;
+  opacity: 0; /* opacityで透過 */
+  position: absolute; /* absoluteでレイアウトに関与させないようにさせる */
 }
 
 input[type="submit"],

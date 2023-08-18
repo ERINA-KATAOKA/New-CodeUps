@@ -12,7 +12,7 @@
 .accordion__title {
   position: relative;
   width: 100%;
-  padding: rem(16);
+  padding: rem(16) rem(64) rem(16) rem(16);
   font-size: rem(16);
   font-weight: $regular;
   color: $white;
@@ -21,7 +21,7 @@
   transition: opacity .3s;
 
   @include mq("md") {
-    padding: rem(25) rem(40);
+    padding: rem(25) rem(112) rem(25) rem(40);
 		font-size: rem(20);
   }
 }

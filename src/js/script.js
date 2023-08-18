@@ -255,6 +255,7 @@ const slider1 = new Swiper ('.js-mv-slider', {
     });
   });
 
+
   // voiceタブメニュー
   $(function() {
     var voiceTab = $(".js-voice-tab-item");
@@ -295,6 +296,7 @@ const slider1 = new Swiper ('.js-mv-slider', {
     });
   });
 
+
   // アコーディオン
   $(function () {
     // 最初のコンテンツは表示
@@ -311,4 +313,51 @@ const slider1 = new Swiper ('.js-mv-slider', {
   });
 
 
+  // コンタクトフォーム
+  $(function() {
+  const $requiredInputs = $('[required]');
+
+  $('.form__button-submit').on('click', function() {
+    let isValid = true;
+
+    $requiredInputs.each(function() {
+      const $this = $(this);
+      const $formItem = $this.closest('.form__item');
+      const $errorMessage = $('.form__error-message');
+
+      if ($this.val() === '') {
+        $errorMessage.addClass('is-opacity');
+        $formItem.addClass('has-error');
+        isValid = false;
+        $this.focus();
+        return false;
+      } else {
+        $errorMessage.removeClass('is-opacity');
+        $formItem.removeClass('has-error');
+      }
+    });
+
+    if (!isValid) {
+      return false;
+    } else {
+      window.location.href = 'page-thanks.html';
+    }
+  });
+
+  // エラーが発生したときにエラーメッセージを表示する
+  $requiredInputs.on('input', function() {
+    const $this = $(this);
+    const $formItem = $this.closest('.form__item');
+    const $errorMessage = $('.form__error-message');
+
+    if ($this.val() === '') {
+      $errorMessage.addClass('is-opacity');
+      $formItem.addClass('has-error');
+    } else {
+      $errorMessage.removeClass('is-opacity');
+      $formItem.removeClass('has-error');
+    }
+  });
 });
+
+  });
