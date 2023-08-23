@@ -26,7 +26,10 @@ window.addEventListener('DOMContentLoaded', () => {
     openingAnimation();
   } else {
     // 2回目以降の訪問時の処理
-    document.querySelector('.js-loading').style.display = 'none';
+    const loadingElement = document.querySelector('.js-loading');
+    if (loadingElement) {
+      loadingElement.style.display = 'none';
+    }
   }
 });
 
@@ -314,50 +317,81 @@ const slider1 = new Swiper ('.js-mv-slider', {
 
 
   // コンタクトフォーム
-  $(function() {
-  const $requiredInputs = $('[required]');
+  $(function () {
+    //バリデーション
+    $("input[required], textarea[required]").on("blur", function () {
+      let error;
+      let value = $(this).val();
+      if (value == "" || !value.match(/[^\s\t]/)) {
+        error = true;
+      }
 
-  $('.form__button-submit').on('click', function() {
-    let isValid = true;
-
-    $requiredInputs.each(function() {
-      const $this = $(this);
-      const $formItem = $this.closest('.form__item');
-      const $errorMessage = $('.form__error-message');
-
-      if ($this.val() === '') {
-        $errorMessage.addClass('is-opacity');
-        $formItem.addClass('has-error');
-        isValid = false;
-        $this.focus();
-        return false;
+      if (error) {
+        //エラー時の処理
+        $(this).addClass("error"); // エラー時にerrorクラスを追加
+        $(".page-contact__form-error").show(); // エラー時メッセージを表示
       } else {
-        $errorMessage.removeClass('is-opacity');
-        $formItem.removeClass('has-error');
+        $(this).removeClass("error"); // エラーが解消されたらerrorクラスを削除
+        $(".page-contact__form-error").hide(); // エラーが解消されたらメッセージを削除
       }
     });
 
-    if (!isValid) {
-      return false;
-    } else {
-      window.location.href = 'page-thanks.html';
-    }
+    // チェックボックスのバリデーション
+    $("input[type=checkbox]").on("change", function () {
+      if ($(this).prop("checked")) {
+        $(this).removeClass("error");
+      } else {
+        $(this).addClass("error");
+      }
+    });
+
+    // 送信ボタンクリック時の処理
+    $(".button-submit__input").click(function (event) {
+      let hasError = false;
+
+      $("input[required], textarea[required]").each(function () {
+        let value = $(this).val();
+        if (value == "" || !value.match(/[^\s\t]/)) {
+          hasError = true;
+          $(this).addClass("error");
+          $(".page-contact__form-error").show();
+        } else {
+          $(this).removeClass("error");
+        }
+      });
+
+      // チェックボックスのバリデーション
+      if (!$("input[type=checkbox]").prop("checked")) {
+        hasError = true;
+        $("input[type=checkbox]").addClass("error");
+      } else {
+        $("input[type=checkbox]").removeClass("error");
+      }
+
+      if (hasError) {
+        event.preventDefault(); // フォーム送信を中止
+        // エラーがある場合にエラーメッセージ表示
+        $(".page-contact__form-error").show();
+        // エラーがある場合にフォーカスを設定
+        $("input[required].error, textarea[required].error").eq(0).focus();
+      }
+    });
   });
 
-  // エラーが発生したときにエラーメッセージを表示する
-  $requiredInputs.on('input', function() {
-    const $this = $(this);
-    const $formItem = $this.closest('.form__item');
-    const $errorMessage = $('.form__error-message');
 
-    if ($this.val() === '') {
-      $errorMessage.addClass('is-opacity');
-      $formItem.addClass('has-error');
-    } else {
-      $errorMessage.removeClass('is-opacity');
-      $formItem.removeClass('has-error');
-    }
+  // サイドバーアコーディオン
+  $(function () {
+    // 最初のコンテンツは表示
+    $(".js-accordion-item:first-of-type .js-accordion-inner").css("display", "block");
+    // 最初の矢印は開いた時の状態に
+    $(".js-accordion-item:first-of-type .js-accordion-header").addClass("is-open");
+    // タイトルをクリックすると
+    $(".js-accordion-header").on("click", function () {
+      // クリックした次の要素を開閉
+      $(this).next().slideToggle(300);
+      // タイトルにopenクラスを付け外しして矢印の向きを変更
+      $(this).toggleClass("is-open", 300);
+    });
   });
+
 });
-
-  });

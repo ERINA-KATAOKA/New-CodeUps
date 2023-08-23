@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.side-blog-card {
+  width: 100%;
+  box-shadow: rem(2) rem(2) rem(10) rgba($color: #000000, $alpha: 0.25);
+}
+
+.side-blog-card__link {
+  padding: rem(16);
+  display: flex;
+  gap: rem(16);
+  transition: opacity .3s;
+}
+
+.side-blog-card__link:hover {
+  opacity: .7;
+}
+
+.side-blog-card__img {
+  width: 46.1832%;
+}
+
+.side-blog-card__img img {
+  aspect-ratio: 121 / 90;
+  object-fit: cover;
+}
+
+.side-blog-card__body {
+  width: 47.70992;
+}
+
+.side-blog-card__date {
+  font-size: rem(12);
+  font-family: $gotu-font;
+  font-weight: $regular;
+  line-height: calc(18 / 12);
+}
+
+.side-blog-card__title {
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: calc(24 / 16);
+}

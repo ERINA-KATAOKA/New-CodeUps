@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.main-content__blog-cards {
+  padding: 0 rem(6);
+
+  @include mq("md") {
+		padding: 0;
+  }
+}

@@ -1,40 +1,40 @@
 @use "global" as *;
 
-.button {
+.button-submit {
   position: relative;
   display: inline-block;
-  font-size: rem(14);
-  font-family: $gotu-font;
-  line-height: calc(22 / 14);
-  color: $white;
-  padding-top: rem(15);
-  padding-bottom: rem(15);
-  padding-right: rem(87);
-  padding-left: rem(40);
+  width: rem(202);
+  height: rem(54);
   border: rem(1) solid $accent-color;
   background-color: $accent-color;
   cursor: pointer;
   z-index: 1;
 }
 
-.button::first-letter {
-  text-transform: uppercase;
-}
-
 @media(hover: hover) {
-  .button:hover {
+  .button-submit:hover {
     color: $accent-color;
     transition: color .2s cubic-bezier(0.45, 0, 0.55, 1);
   }
 }
 
-.button.button--white {
-  color: $accent-color;
-  border: rem(1) solid $white;
-  background-color: $white;
+.button-submit__input {
+  padding: rem(16) rem(112) rem(16) rem(56);
+  font-size: rem(14);
+  font-family: $gotu-font;
+  line-height: calc(22 / 14);
+  color: $white;
+  text-transform: capitalize;
+  transition: color .3s;
 }
 
-.button::before {
+@media(hover: hover) {
+  .button-submit:hover .button-submit__input {
+    color: $accent-color;
+  }
+}
+
+.button-submit::before {
   position: absolute;
   content: "";
   top: rem(4);
@@ -45,11 +45,7 @@
   z-index: -2;
 }
 
-.button.button--white::before {
-  border: rem(1) solid $white;
-}
-
-.button::after {
+.button-submit::after {
   position: absolute;
   content: "";
   top: 0;
@@ -64,27 +60,12 @@
 }
 
 @media(hover: hover) {
-  .button:hover::after {
+  .button-submit:hover::after {
     transform: scale(1, 1);
   }
 }
 
-.button.button--white::after {
-  background-color: $accent-color;
-}
-
-@media(hover: hover) {
-  .button.button--white:hover {
-    color: $white;
-  }
-}
-
-.button.button--contact {
-  padding-right: rem(112);
-  padding-left: rem(56);
-}
-
-.button span::after {
+.button-submit span::after {
   position: absolute;
   content: "";
   top: 47%;
@@ -98,18 +79,8 @@
 }
 
 @media(hover: hover) {
-  .button:hover span::after {
+  .button-submit:hover span::after {
     background-image: url(../images/common/button-arrow-green.svg);
     transition: background-image .2s cubic-bezier(0.45, 0, 0.55, 1);
-  }
-}
-
-.button.button--white span::after {
-  background-image: url(../images/common/button-arrow-green.svg);
-}
-
-@media(hover: hover) {
-  .button.button--white:hover span::after {
-    background-image: url(../images/common/button-arrow.svg);
   }
 }

@@ -29,6 +29,13 @@
   }
 }
 
+@media(hover: hover) {
+	.blog-card.blog-card--page
+  .blog-card__link:hover {
+    opacity: 1;
+  }
+}
+
 .blog-card__img {
   width: 100%;
 }
@@ -37,6 +44,25 @@
   aspect-ratio: 301 / 201;
   object-fit: cover;
 }
+
+.blog-card.blog-card--page
+.blog-card__img {
+  overflow: hidden;
+}
+
+.blog-card.blog-card--page
+.blog-card__img img {
+  transition: transform .3s ease;
+}
+
+@media(hover: hover) {
+  .blog-card.blog-card--page
+  .blog-card__link:hover
+  .blog-card__img img {
+    transform: scale(1.2);
+  }
+}
+
 
 .blog-card__body {
   display: flex;

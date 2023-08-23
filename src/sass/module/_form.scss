@@ -1,42 +1,273 @@
 @use "global" as *;
 
-.form {
-  max-width: rem(700);
-  width: 100%;
-  margin: 0 auto;
-}
-
-.form__error-message {
-  font-size: rem(14);
+[type="text"],
+[type="search"],
+[type="tel"],
+[type="url"],
+[type="email"],
+[type="password"],
+[type="date"],
+textarea {
+	/* リセットCSS */
+	border: none;
+	border-radius: 0;
+	background-image: none;
+	font-family: inherit;
+	/* カスタム */
+	font-size: rem(16);
   font-weight: $regular;
-  color: $red;
-  text-align: center;
-  opacity: 0;
-  transition: opacity .3s;
+	padding: rem(7) rem(16);
+	width: 100%;
+	background: $white;
+	border: 1px solid $accent-color;
+  /* プレースホルダー */
+  &::placeholder {
+    color: $bg-green;
+  }
+	/* ホバー時 */
+	// &:hover {  //ホバーしたときの色
+	// 	border: 1px solid $border-cr;
+	// }
+	/* フォーカス時 */
+	&:focus {
+		box-shadow: rem(0) rem(0) rem(5) rgba($color: $accent-color, $alpha: 0.8);
+	}
 }
-
-.form__list {
-  margin-top: rem(40);
-}
-
-.form__list dl {
-  display: flex;
-  flex-direction: column;
-
-  @include mq("md") {
-		flex-direction: row;
+/* エラー時のスタイル */
+[type="text"].error,
+[type="search"].error,
+[type="tel"].error,
+[type="url"].error,
+[type="email"].error,
+[type="password"].error,
+[type="date"].error,
+textarea.error  {
+  border: rem(1) solid $red;
+  background: rgba($color: $red, $alpha: 0.2);
+  &::placeholder {
+    color: $white;
+  }
+  &:focus {
+    box-shadow: rem(0) rem(0) rem(5) rgba($color: $red, $alpha: 0.8);
   }
 }
 
-.form__list dl dt {
-  @include mq("md") {
-		width: 31.42858%;
+button,
+[type="button"],
+[type="submit"] {
+	/* リセットCSS */
+	margin: 0;
+	background-image: none;
+	width: auto;
+	display: inline-block;
+	text-decoration: none;
+	border: none;
+	border-radius: 0;
+	/* カスタム */
+  // padding: rem(16) rem(112) rem(16) rem(56);
+  // width: 100%;
+  // height: 100%;
+	// background: $accent-color;
+	// color: $white;
+	// font-size: rem(14);
+  // line-height: calc(22 / 14);
+  // text-transform: capitalize;
+	// cursor: pointer;
+	// transition: 0.3s ease;
+}
+
+[type="radio"] {
+	opacity: 0;
+
+	+ span {
+		position: relative;
+		display: inline-block;
+		padding-left: rem(22);
+		font-size: rem(16);
+		line-height: 1;
+		cursor: pointer;
+    transition: .3s ease;
+    &:hover {
+      opacity: .7;
+    }
+    /* チェックなし */
+		&::before {
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			border: 1px solid $accent-color;
+			width: rem(14);
+			height: rem(14);
+      display: block;
+		}
+		&::after {
+      opacity: 0;
+			transition: 0.3s ease;
+		}
+  }
+  /* チェックあり */
+	&:checked + span {
+    &::after {
+      position: absolute;
+			content: "";
+			top: 50%;
+			left: rem(2);
+			transform: translateY(-50%);
+      background-image: url(../images/common/check.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+			width: rem(11);
+			height: rem(8);
+			opacity: 1;
+		}
+	}
+  /* フォーカス時のカラー */
+  &:focus {
+    + span::before {
+      box-shadow: rem(0) rem(0) rem(5) rgba($color: $accent-color, $alpha: 0.8);
+    }
   }
 }
 
-.form__list dl dd {
+[type="checkbox"] {
+	opacity: 0;
+
+	+ span {
+		position: relative;
+		display: inline-block;
+		padding-left: rem(38);
+		font-size: rem(16);
+		line-height: 1;
+		cursor: pointer;
+		transition: 0.3s ease;
+    &:hover {
+      opacity: .7;
+    }
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			background: $white;
+			border: 1px solid $accent-color;
+			width: rem(22);
+			height: rem(22);
+		}
+
+		&::after {
+			opacity: 0;
+			transition: 0.3s ease;
+		}
+	}
+  /* チェック時 */
+	&:checked + span {
+		&::after {
+			position: absolute;
+			content: "";
+			top: 50%;
+			left: 0;
+			display: block;
+			opacity: 1;
+			/* チェックマークじゃない場合は以下を変更する */
+			transform: translateY(-50%) rotate(-45deg);
+			width: calc(rem(22) * 0.9);
+			height: calc(rem(22) * 0.5);
+			margin-top: -0.1em;
+			margin-left: 0.1em;
+			border-left: rem(4) solid $red;
+			border-bottom: rem(4) solid $red;
+		}
+	}
+  /* フォーカス時のカラー */
+  &:focus {
+    + span::before {
+      box-shadow: rem(0) rem(0) rem(5) rgba($color: $accent-color, $alpha: 0.8);
+    }
+  }
+}
+/* エラー時のスタイル */
+[type="checkbox"].error {
+  + span::before {
+    border: rem(1) solid $red;
+    background: rgba($color: $red, $alpha: 0.2);
+  }
+  &:focus {
+    + span::before {
+      box-shadow: rem(0) rem(0) rem(5) rgba($color: $red, $alpha: 0.8);
+    }
+  }
+}
+
+select {
+	/* リセットCSS */
+	border-radius: 0;
+	font-family: inherit;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	/* カスタム */
+	font-size: rem(12);
+	padding: rem(5) rem(8);
+	background-color: $white;
+  border: 1px solid $accent-color;
+	/* デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
+	appearance: none;
+	/* デフォルトではないアイコンを使う場合 */
+	background-image: url(../images/common/select.svg);
+	background-position: right rem(8) center;
+	background-repeat: no-repeat;
+	&:focus {
+		box-shadow: rem(0) rem(0) rem(5) rgba($color: $accent-color, $alpha: 0.8);
+	}
+}
+
+[type="date"] {
+	position: relative;
+	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
+	appearance: auto;
+	/*↓デフォルトではないアイコンを使う場合は入力する*/
+	// background-image: url();
+	// background-position: right 12px center;
+	// background-repeat: no-repeat;
+	&:focus {
+		border-color: 1px solid $accent-color;
+	}
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+textarea {
+  display: block;
+	height: rem(200);
+  width: 100%;
+  resize: none;
+}
+
+/* --------------------------------------------
+ *  レイアウト
+ * -------------------------------------------- */
+
+.form {
+  margin: 0 auto;
+  max-width: rem(700);
+}
+
+.form__item:not(:first-child) {
+  margin-top: rem(24);
+
   @include mq("md") {
-		width: 68.57142%;
+		margin-top: rem(40);
   }
 }
 
@@ -45,24 +276,22 @@
   border-bottom: rem(1) dashed $accent-color;
 
   @include mq("md") {
+    display: flex;
 		padding-bottom: rem(40);
   }
 }
 
-.form__item:not(:first-child) {
-  padding-top: rem(24);
+.form__item dt {
+  font-size: rem(16);
+  font-weight: $bold;
 
   @include mq("md") {
-		padding-top: rem(40);
+		width: 31.42868%;
   }
 }
 
-.form__label-text {
-  font-size: rem(16);
-  font-weight: $bold;
-}
-
-.form__label-text span {
+.form__item dt span {
+  display: inline-block;
   margin-left: rem(8);
   padding: rem(2) rem(16);
   font-size: rem(12);
@@ -71,252 +300,36 @@
   background-color: $red;
 }
 
-.form__input input {
+.form__item dd {
   margin-top: rem(16);
-  width: 100%;
-  height: rem(40);
-  border: rem(1) solid $accent-color;
-  padding-left: rem(8);
 
   @include mq("md") {
     margin-top: 0;
+		width: 68.57142%;
   }
 }
 
-.form__input input::placeholder {
-	color: $bg-green;
-}
-
-.form__input-text {
-  padding: 0;
-  width: 100%;
-  height: inherit;
-}
-
-.form__input-text::placeholder {
-	color: $bg-green;
-}
-
-.form__radio input {
-  position: relative;
+.form__radio {
   display: flex;
   flex-direction: column;
-  margin-top: rem(16);
-
-  @include mq("md") {
-		margin-top: 0;
-  }
+  row-gap: rem(4);
 }
 
-.form__radio label:not(:first-child) {
-  margin-top: rem(4);
-}
-
-.form__radio-text {
-  position: relative;
-  font-size: rem(16);
-  font-weight: $regular;
-  display: flex;
-  align-items: center;
-}
-
-.form__radio-text::before {
-  content: "";
-  margin-right: rem(8);
-  width: rem(14);
-  height: rem(14);
-  border: rem(1) solid $accent-color;
-}
-
-.form__radio-text::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: rem(2);
-  transform: translateY(-50%);
-  width: rem(11);
-  height: rem(8);
-  background-image: url(../images/common/check.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: none;
-}
-
-.form__radio-input:checked+.form__radio-text::after {
-  display: block;
-}
-
-.form__select {
-  position: relative;
-}
-
-.form__select select {
-  width: 100%;
-  height: rem(40);
-  border: rem(1) solid $accent-color;
-  padding-left: rem(8);
-  margin-top: rem(16);
-
-  @include mq("md") {
-    height: rem(30);
-    margin-top: 0;
-  }
-}
-
-.form__select::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: rem(8);
-  transform: translateY(-50%);
-  width: rem(12);
-  height: rem(12);
-  background-image: url(../images/common/select.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.form__select-text {
-  width: 100%;
-  height: inherit;
-  font-size: rem(12);
-  font-weight: $regular;
-}
-
-.form__textarea textarea {
-  display: block;
-  width: 100%;
-  height: rem(200);
-  border: rem(1) solid $accent-color;
-  margin-top: rem(16);
-
-  @include mq("md") {
-		margin-top: 0;
-  }
-}
-
-.form__textarea-text {
-  width: 100%;
-  height: inherit;
-  resize: none;
-  padding: rem(2) rem(8);
-}
-
-.form__privacy {
+.form__checkbox {
   margin-top: rem(40);
-  display: flex;
-  justify-content: center;
+  text-align: center;
 
   @include mq("md") {
 		margin-top: rem(80);
   }
 }
 
-.form__checkbox {
-  padding: 0 rem(31);
-}
-
-.form__check-text {
-  position: relative;
-  padding-left: rem(30);
-  font-size: rem(14);
-  font-weight: $regular;
-  line-height: calc(22 / 14);
-  display: flex;
-  align-items: flex-start;
-}
-
-.form__check-text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: rem(22);
-  height: rem(22);
-  border: rem(1) solid $accent-color;
-}
-
-.form__check-text::after {
-  content: "";
-  position: absolute;
-  top: rem(11.5);
-  left: rem(2.5);
-  transform: translateY(-50%);
-  width: rem(17);
-  height: rem(12.5);
-  background-image: url(../images/common/check.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: none;
-}
-
-.form__check-input:checked+.form__check-text::after {
-  display: block;
-}
-
 .form__button {
-  margin-top: rem(24);
+  margin-top: rem(40);
   text-align: center;
 
   @include mq("md") {
-		margin-top: rem(40);
+		margin-top: rem(80);
   }
 }
 
-.form__button span {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-
-.form__button-submit {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  color: $white;
-  text-transform: capitalize;
-  transition: color .3s;
-}
-
-@media(hover: hover) {
-  .form__button:hover .form__button-submit {
-    color: $accent-color;
-  }
-}
-
-// フォーカス時
-.form__input input:focus,
-.form__select select:focus,
-.form__textarea textarea:focus,
-.form__radio input:focus+.form__radio-text::before,
-.form__check-input:focus+.form__check-text::before {
-  box-shadow: 0 0 rem(2) rem(2) rgba($color: $accent-color, $alpha: 0.5);
-}
-
-// 未入力時エラー
-.form__error-message.is-opacity {
-  opacity: 1;
-}
-
-.form__item.has-error .form__input-text,
-.has-error.form__check-input,
-.form__item.has-error .form__textarea-text {
-  border: rem(1) solid $red;
-  background-color: rgba($color: $red, $alpha: 0.2);
-}
-
-.form__item.has-error .form__input-text:focus,
-.form__item.has-error .form__textarea-text:focus,
-.form__checkbox.has-error .form__check-input:focus {
-  box-shadow: 0 0 rem(2) rem(2) rgba($color: $red, $alpha: 0.3);
-}
-
-.form__item.has-error .form__input-text::placeholder,
-.form__item.has-error .form__textarea-text::placeholder {
-  color: $white;
-}

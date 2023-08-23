@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.blog-single__date {
+  font-size: rem(14);
+  font-family: $gotu-font;
+  font-weight: $regular;
+  line-height: calc(18 / 14);
+}
+
+.blog-single__title {
+  margin-top: rem(8);
+  padding-bottom: rem(4);
+  font-size: rem(24);
+  font-weight: $medium;
+  border-bottom: rem(1) solid $accent-color;
+
+  @include mq("md") {
+    padding: 0;
+		font-size: rem(32);
+  }
+}
+
+.blog-single__img img {
+  aspect-ratio: 345 / 231;
+  object-fit: cover;
+
+  @include mq("md") {
+		aspect-ratio: 700 / 468;
+  }
+}
+
+.blog-single__text {
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(24 / 16);
+}
+
+.blog-single__list-item:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.blog-single__list-item {
+  display: flex;
+  align-items: center;
+}
+
+.blog-single__list-item::before {
+  content: '';
+  margin-right: rem(9);
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/blog-list-icon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

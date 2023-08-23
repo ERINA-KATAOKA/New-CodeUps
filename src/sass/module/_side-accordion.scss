@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.side-accordion__header,
+.side-accordion__link {
+  position: relative;
+  padding-left: rem(32);
+  font-size: rem(24);
+  font-weight: $regular;
+  color: $accent-color;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.side-accordion__header::before,
+.side-accordion__link::before {
+  content: '';
+  position: absolute;
+  top: rem(6);
+  left: 0;
+  width: rem(24);
+  height: rem(24);
+  background-image: url(../images/common/arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform .3s;
+}
+
+.is-open.side-accordion__header::before {
+  content: '';
+  transform: rotate(90deg);
+}
+
+.side-accordion__inner {
+  margin-top: rem(4);
+  margin-left: rem(24);
+  display: none;
+}
+
+// ホバー
+.side-accordion__header:hover,
+.side-accordion__link:hover {
+  opacity: .7;
+}

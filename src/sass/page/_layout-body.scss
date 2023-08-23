@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.layout-body {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include mq("md") {
+		grid-template-columns: 1fr .41643fr;
+    gap: rem(80);
+  }
+}

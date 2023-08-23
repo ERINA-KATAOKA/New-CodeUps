@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.side-bar__items {
+  padding: 0 rem(25);
+
+  @include mq("md") {
+		padding: 0;
+  }
+}
+
+.side-bar__item:not(:first-child) {
+  margin-top: rem(80);
+}
+
+.side-bar__content {
+  margin-top: rem(24);
+}
+
+.side-bar__button {
+  margin-top: rem(40);
+  text-align: center;
+}

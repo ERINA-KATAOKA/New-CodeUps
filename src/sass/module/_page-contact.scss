@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.page-contact__form-error {
+  margin-bottom: rem(40);
+  font-size: rem(14);
+  text-align: center;
+  color: $red;
+  display: none;
+}
+
+.page-contact__form-error p {
+  display: inline-block;
+  text-align: left;
+}

@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.side-heading__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: rem(50);
+  padding-left: rem(82);
+  font-size: rem(24);
+  font-weight: $regular;
+  border-left: rem(8) solid $accent-color;
+}
+
+.side-heading__title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: rem(24);
+  transform: translateY(-50%);
+  width: rem(50);
+  height: rem(50);
+  background-image: url(../images/common/icon1-black.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

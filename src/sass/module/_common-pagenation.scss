@@ -7,6 +7,10 @@
   column-gap: rem(40);
 }
 
+.common-pagenation.common-pagenation--single {
+  column-gap: rem(82);
+}
+
 .common-pagenation__prev,
 .common-pagenation__next {
   position: relative;

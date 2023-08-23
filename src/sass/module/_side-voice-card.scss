@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.side-voice-card__img {
+  width: 100%;
+
+}
+
+.side-voice-card img {
+  aspect-ratio: 294 / 218;
+  object-fit: cover;
+}
+
+.side-voice-card__age {
+  margin-top: rem(16);
+  font-size: rem(12);
+  font-weight: $regular;
+  line-height: calc(18 / 12);
+}
+
+.side-voice-card__title {
+  margin-top: rem(8);
+  font-size: rem(24);
+  font-weight: $medium;
+}
