@@ -1,12 +1,14 @@
 @use "global" as *;
 
 .common-tab {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // flex-wrap: wrap;
   column-gap: rem(21);
   row-gap: rem(16);
-
+  
   @include mq("md") {
+    grid-template-columns: repeat(4, rem(162));
 		column-gap: rem(32);
   }
 }
@@ -15,8 +17,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: rem(162);
-  height: rem(34);
+  width: 100%;
+  padding: rem(4.5);
   font-size: rem(14);
   font-weight: $regular;
   line-height: calc(22 / 14);

@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .blog-single__date {
+  display: block;
   font-size: rem(14);
   font-family: $gotu-font;
   font-weight: $regular;
@@ -8,24 +9,25 @@
 }
 
 .blog-single__title {
-  margin-top: rem(8);
-  padding-bottom: rem(4);
+  margin-top: rem(7);
+  padding-bottom: rem(3);
   font-size: rem(24);
   font-weight: $medium;
   border-bottom: rem(1) solid $accent-color;
-
+  
   @include mq("md") {
-    padding: 0;
+    padding-bottom: 0;
 		font-size: rem(32);
+    line-height: 1.4;
   }
 }
 
-.blog-single__img img {
+.blog-single__img {
   aspect-ratio: 345 / 231;
   object-fit: cover;
 
   @include mq("md") {
-		aspect-ratio: 700 / 468;
+		aspect-ratio: 706 / 468;
   }
 }
 

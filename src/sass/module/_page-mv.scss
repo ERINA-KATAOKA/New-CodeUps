@@ -5,7 +5,7 @@
   width: 100%;
 }
 
-.page-mv__img img{
+.page-mv__img{
   width: 100%;
   aspect-ratio: 375 / 460;
   object-fit: cover;
@@ -22,7 +22,7 @@
   transform: translate(-50%,-50%);
 
   @include mq("md") {
-		top: 50%;
+		top: 59%;
   }
 }
 

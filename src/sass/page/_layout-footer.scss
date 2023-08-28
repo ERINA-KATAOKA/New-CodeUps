@@ -11,3 +11,19 @@
     padding-bottom: rem(80);
   }
 }
+
+.layout-footer.layout-footer--contact {
+  margin-top: rem(144);
+
+  @include mq("md") {
+		margin-top: rem(120);
+  }
+}
+
+.layout-footer.layout-footer--404 {
+  margin-top: rem(43);
+
+  @include mq("md") {
+		margin-top: rem(152);
+  }
+}

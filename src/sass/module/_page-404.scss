@@ -7,17 +7,19 @@
 .page-404__inner::before {
   content: "";
   position: absolute;
-  top: rem(-80);
-  left: 0;
+  top: rem(-89);
+  left: rem(15);
   width: rem(345);
   height: rem(345);
   background-image: url(../images/common/bg-404.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  z-index: -1;
 
   @include mq("md") {
-    top: rem(-178);
+    top: rem(-164);
+    left: rem(25);
 		width: rem(698);
     height: rem(698);
   }
@@ -34,6 +36,7 @@
   letter-spacing: 0.5em;
   color: $white;
   text-indent: 0.5em;
+  line-height: 1;
 
   @include mq("md") {
 		font-size: rem(160);
@@ -41,13 +44,22 @@
 }
 
 .page-404__text {
+  margin-top: rem(4);
   font-size: rem(16);
   font-family: $lato-font;
   font-weight: $regular;
   line-height: calc(24 / 16);
   color: $white;
+
+  @include mq("md") {
+		margin-top: rem(40);
+  }
 }
 
 .page-404__button {
   margin-top: rem(40);
+
+  @include mq("md") {
+		margin-top: rem(80);
+  }
 }

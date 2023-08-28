@@ -102,7 +102,7 @@
 }
 
 .page-about__text-content {
-  margin-top: rem(16);
+  margin-top: rem(39);
 
   @include mq("md") {
 		margin-top: 0;
@@ -117,6 +117,7 @@
 
   @include mq("md") {
 		color: $white;
+    margin-bottom: rem(8);
   }
 }
 

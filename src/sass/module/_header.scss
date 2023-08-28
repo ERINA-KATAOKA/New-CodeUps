@@ -40,7 +40,16 @@
   position: relative;
   z-index: 9999;
   transition: opacity .3s;
+  
+  @include mq("md") {
+    max-width: rem(133);
+  }
+}
 
+.header__link img {
+  max-width: rem(102);
+  width: 100%;
+  
   @include mq("md") {
     max-width: rem(133);
   }

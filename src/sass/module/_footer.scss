@@ -67,7 +67,7 @@
 
 .footer__nav {
   max-width: rem(500);
-  margin-top: rem(28);
+  margin: rem(28) auto 0;
   display: flex;
   justify-content: space-between;
 
@@ -81,13 +81,10 @@
 
 .footer__left,
 .footer__right {
+  margin-right: rem(11);
   @include mq("md") {
 		display: contents;
   }
-}
-
-.footer__right {
-  margin-left: rem(18);
 }
 
 .footer__title {

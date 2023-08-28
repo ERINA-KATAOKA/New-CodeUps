@@ -11,6 +11,10 @@
   text-transform: uppercase;
 }
 
+.breadcrumb__item.breadcrumb__item--error {
+  display: none;
+}
+
 .breadcrumb__items.breadcrumb__items--white {
   color: $white;
 }

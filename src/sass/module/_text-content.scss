@@ -6,7 +6,7 @@
 }
 
 .text-content__body {
-  margin-top: rem(40);
+  margin-top: rem(39);
   font-size: rem(16);
   line-height: calc(32 / 16);
 }
@@ -29,5 +29,14 @@
 .text-content__list,
 .text-content__item:not(:first-child),
 .text-content__text:not(:first-child) {
-  margin-top: rem(40);
+  margin-top: rem(31);
+}
+
+.text-content__list ol {
+  list-style-position: outside;
+  padding-left: rem(23);
+}
+
+.text-content__list ol p {
+  margin-left: rem(-23);
 }

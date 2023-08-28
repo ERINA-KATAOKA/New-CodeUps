@@ -25,3 +25,11 @@
     height: rem(138);
   }
 }
+
+.layout-bg.layout-bg--sitemap::before {
+  top: rem(-11);
+
+  @include mq("md") {
+		top: rem(-57);
+  }
+}

@@ -3,3 +3,17 @@
 .layout-pagenation {
   margin-top: rem(80);
 }
+
+.layout-pagenation.layout-pagenation--voice {
+  @include mq("md") {
+		margin-top: rem(72);
+  }
+}
+
+.layout-pagenation.layout-pagenation--single {
+  margin-top: rem(40);
+
+  @include mq("md") {
+		margin-top: rem(80);
+  }
+}

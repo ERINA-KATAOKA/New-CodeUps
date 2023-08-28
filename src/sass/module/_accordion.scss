@@ -12,7 +12,7 @@
 .accordion__title {
   position: relative;
   width: 100%;
-  padding: rem(16) rem(64) rem(16) rem(16);
+  padding: rem(15.5) rem(64) rem(15.5) rem(16);
   font-size: rem(16);
   font-weight: $regular;
   color: $white;
@@ -32,12 +32,13 @@
   position: absolute;
   top: 50%;
   right: rem(16);
-  width: rem(32);
+  width: rem(28);
   height: rem(1);
   background-color: $white;
-
+  
   @include mq("md") {
-		right: rem(40);
+    right: rem(40);
+    width: rem(32);
   }
 }
 
@@ -59,7 +60,7 @@
 .accordion__content {
   display: none;
   width: 100%;
-  padding: rem(24) rem(16);
+  padding: rem(22) rem(16);
   border: rem(1) solid $accent-color;
 
   @include mq("md") {
@@ -71,4 +72,5 @@
 .accordion__content p {
   font-size: rem(16);
   font-weight: $regular;
+  line-height: 1.44;
 }

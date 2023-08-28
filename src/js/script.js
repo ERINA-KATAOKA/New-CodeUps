@@ -329,10 +329,10 @@ const slider1 = new Swiper ('.js-mv-slider', {
       if (error) {
         //エラー時の処理
         $(this).addClass("error"); // エラー時にerrorクラスを追加
-        $(".page-contact__form-error").show(); // エラー時メッセージを表示
+        $(".js-error").show(); // エラー時メッセージを表示
       } else {
         $(this).removeClass("error"); // エラーが解消されたらerrorクラスを削除
-        $(".page-contact__form-error").hide(); // エラーが解消されたらメッセージを削除
+        $(".js-error").hide(); // エラーが解消されたらメッセージを削除
       }
     });
 
@@ -354,7 +354,7 @@ const slider1 = new Swiper ('.js-mv-slider', {
         if (value == "" || !value.match(/[^\s\t]/)) {
           hasError = true;
           $(this).addClass("error");
-          $(".page-contact__form-error").show();
+          $(".js-error").show();
         } else {
           $(this).removeClass("error");
         }
@@ -371,7 +371,7 @@ const slider1 = new Swiper ('.js-mv-slider', {
       if (hasError) {
         event.preventDefault(); // フォーム送信を中止
         // エラーがある場合にエラーメッセージ表示
-        $(".page-contact__form-error").show();
+        $(".js-error").show();
         // エラーがある場合にフォーカスを設定
         $("input[required].error, textarea[required].error").eq(0).focus();
       }

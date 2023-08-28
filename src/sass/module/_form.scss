@@ -138,11 +138,15 @@ button,
 	+ span {
 		position: relative;
 		display: inline-block;
-		padding-left: rem(38);
-		font-size: rem(16);
-		line-height: 1;
+		padding-left: rem(30);
+		font-size: rem(14);
+		line-height: calc(22 / 14);
+		text-align: left;
 		cursor: pointer;
 		transition: 0.3s ease;
+		@include mq("md") {
+		padding-left: rem(40);
+		}
     &:hover {
       opacity: .7;
     }
@@ -150,7 +154,7 @@ button,
 		&::before {
 			position: absolute;
 			content: "";
-			top: 50%;
+			top: rem(10);
 			left: 0;
 			transform: translateY(-50%);
 			background: $white;
@@ -169,7 +173,7 @@ button,
 		&::after {
 			position: absolute;
 			content: "";
-			top: 50%;
+			top: rem(9);
 			left: 0;
 			display: block;
 			opacity: 1;
@@ -213,7 +217,7 @@ select {
 	width: 100%;
 	/* カスタム */
 	font-size: rem(12);
-	padding: rem(5) rem(8);
+	padding: rem(10) rem(8);
 	background-color: $white;
   border: 1px solid $accent-color;
 	/* デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
@@ -277,11 +281,13 @@ textarea {
 
   @include mq("md") {
     display: flex;
-		padding-bottom: rem(40);
+		padding-bottom: rem(39);
   }
 }
 
 .form__item dt {
+	display: flex;
+	align-items: start;
   font-size: rem(16);
   font-weight: $bold;
 
@@ -292,16 +298,19 @@ textarea {
 
 .form__item dt span {
   display: inline-block;
+	align-items: center;
   margin-left: rem(8);
-  padding: rem(2) rem(16);
+  padding: rem(2) rem(11);
   font-size: rem(12);
   font-weight: $regular;
+	letter-spacing: 0.4em;
+	text-indent: 0.4em;
   color: $white;
   background-color: $red;
 }
 
 .form__item dd {
-  margin-top: rem(16);
+  margin-top: rem(14);
 
   @include mq("md") {
     margin-top: 0;
@@ -312,7 +321,11 @@ textarea {
 .form__radio {
   display: flex;
   flex-direction: column;
-  row-gap: rem(4);
+  row-gap: rem(3);
+
+	@include mq("md") {
+		row-gap: rem(4);
+	}
 }
 
 .form__checkbox {
@@ -325,11 +338,11 @@ textarea {
 }
 
 .form__button {
-  margin-top: rem(40);
+  margin-top: rem(24);
   text-align: center;
 
   @include mq("md") {
-		margin-top: rem(80);
+		margin-top: rem(40);
   }
 }
 

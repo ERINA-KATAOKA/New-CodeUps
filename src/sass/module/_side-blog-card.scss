@@ -26,17 +26,19 @@
 }
 
 .side-blog-card__body {
-  width: 47.70992;
+  width: 47.70992%;
 }
 
 .side-blog-card__date {
+  display: block;
   font-size: rem(12);
   font-family: $gotu-font;
   font-weight: $regular;
-  line-height: calc(18 / 12);
+  line-height: 1.2;
 }
 
 .side-blog-card__title {
+  margin-top: rem(6);
   font-size: rem(16);
   font-weight: $medium;
   line-height: calc(24 / 16);
