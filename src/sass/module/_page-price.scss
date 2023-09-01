@@ -1,8 +1,11 @@
 @use "global" as *;
 
-.page-price__list-wrap {
-  max-width: rem(700);
-  margin: 0 auto;
+.page-price__inner.inner {
+  max-width: rem(600);
+
+  @include mq("md") {
+		max-width: rem(750);
+  }
 }
 
 .page-price__list {

@@ -262,16 +262,11 @@ textarea {
  *  レイアウト
  * -------------------------------------------- */
 
-.form {
-  margin: 0 auto;
-  max-width: rem(700);
-}
-
 .form__item:not(:first-child) {
-  margin-top: rem(24);
+  padding-top: rem(24);
 
   @include mq("md") {
-		margin-top: rem(40);
+		padding-top: rem(40);
   }
 }
 

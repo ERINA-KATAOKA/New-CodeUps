@@ -132,9 +132,9 @@
               <!-- <li class="drawer__item"><a href="page-campaign.html">貸切ファンダイビング</a></li> -->
               <li class="drawer__title"><a href="page-about.html">私たちについて</a></li>
               <li class="drawer__title"><a href="page-information.html">ダイビング情報</a></li>
-              <li class="drawer__item"><a href="page-information.html">ライセンス講習</a></li>
-              <li class="drawer__item"><a href="page-information.html">体験ダイビング</a></li>
-              <li class="drawer__item"><a href="page-information.html">ファンダイビング</a></li>
+              <li class="drawer__item"><a href="page-information.html#license">ライセンス講習</a></li>
+              <li class="drawer__item"><a href="page-information.html#experience">体験ダイビング</a></li>
+              <li class="drawer__item"><a href="page-information.html#fan">ファンダイビング</a></li>
               <li class="drawer__title"><a href="page-blog.html">ブログ</a></li>
             </ul>
             <ul class="drawer__right">
@@ -187,42 +187,47 @@
     <!-- page-information -->
     <section class="page-information layout-page">
       <div class="page-information__inner inner layout-bg">
-        <ul class="page-information__tab information-tab">
-          <li class="information-tab__item js-information-tab-item tab-license current">
-            <span>ライセンス<br class="u-mobile">講習</span>
+        <ul class="page-information__tab information-tab js-tab-button">
+          <li class="information-tab__item current">
+            <a href="#license">ライセンス<br class="u-mobile">講習</a>
           </li>
-          <li class="information-tab__item js-information-tab-item tab-fan">
-            <span>ファン<br class="u-mobile">ダイビング</span>
+          <li class="information-tab__item">
+            <a href="#experience">体験<br class="u-mobile">ダイビング</a>
           </li>
-          <li class="information-tab__item js-information-tab-item tab-experience">
-            <span>体験<br class="u-mobile">ダイビング</span>
+          <li class="information-tab__item">
+            <a href="#fan">ファン<br class="u-mobile">ダイビング</a>
           </li>
         </ul>
-        <ul class="page-information__tab-contents">
-          <li class="page-information__card information-card js-information-tab-content license">
-            <div class="information-card__text-content">
-              <h3 class="information-card__title">ライセンス講習</h3>
-              <p class="information-card__text">泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！</p>
+        <ul class="page-information__tab-contents js-tab-content">
+          <li id="license" class="page-information__card is-active">
+            <div class="information-card">
+              <div class="information-card__text-content">
+                <h3 class="information-card__title">ライセンス講習</h3>
+                <p class="information-card__text">泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！</p>
+              </div>
+              <img class="information-card__img" src="./assets/images/common/information01.jpg" alt="5人のダイバーが講習を受けている様子">
             </div>
-            <img class="information-card__img" src="./assets/images/common/information01.jpg" alt="5人のダイバーが講習を受けている様子">
           </li>
-          <li class="page-information__card information-card js-information-tab-content fan">
-            <div class="information-card__text-content">
-              <h3 class="information-card__title">ファンダイビング</h3>
-              <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！</p>
+          <li id="experience" class="page-information__card">
+            <div class="information-card">
+              <div class="information-card__text-content">
+                <h3 class="information-card__title">体験ダイビング</h3>
+                <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！</p>
+              </div>
+              <img class="information-card__img" src="./assets/images/common/information03.jpg" alt="2匹の熱帯魚が泳いでいる様子">
             </div>
-            <img class="information-card__img" src="./assets/images/common/information02.jpg" alt="たくさんの熱帯魚が泳いでいる様子">
           </li>
-          <li class="page-information__card information-card js-information-tab-content experience">
-            <div class="information-card__text-content">
-              <h3 class="information-card__title">体験ダイビング</h3>
-              <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！</p>
+          <li id="fan" class="page-information__card">
+            <div class="information-card">
+              <div class="information-card__text-content">
+                <h3 class="information-card__title">ファンダイビング</h3>
+                <p class="information-card__text">ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！</p>
+              </div>
+              <img class="information-card__img" src="./assets/images/common/information02.jpg" alt="たくさんの熱帯魚が泳いでいる様子">
             </div>
-            <img class="information-card__img" src="./assets/images/common/information03.jpg" alt="2匹の熱帯魚が泳いでいる様子">
           </li>
         </ul>
       </div>
-
     </section>
 
     <!-- contact -->
@@ -263,7 +268,7 @@
   <footer>
     <div class="footer layout-footer">
       <div class="footer__page-top page-top js-page-top">
-        <a href="#" class="page-top__link">
+        <a href="#top" class="page-top__link">
           <img src="./assets/images/common/top-button.png" alt="トップへ戻る">
         </a>
       </div>
@@ -293,9 +298,9 @@
             </ul>
             <ul class="footer__left-bottom">
               <li class="footer__title"><a href="page-information.html">ダイビング情報</a></li>
-              <li class="footer__item"><a href="page-information.html">ライセンス講習</a></li>
-              <li class="footer__item"><a href="page-information.html">体験ダイビング</a></li>
-              <li class="footer__item"><a href="page-information.html">ファンダイビング</a></li>
+              <li class="footer__item"><a href="page-information.html#license">ライセンス講習</a></li>
+              <li class="footer__item"><a href="page-information.html#experience">体験ダイビング</a></li>
+              <li class="footer__item"><a href="page-information.html#fan">ファンダイビング</a></li>
               <!-- <li class="footer__item"><a href="page-information.html">スペシャルダイビング</a></li> -->
               <li class="footer__title"><a href="page-blog.html">ブログ</a></li>
             </ul>

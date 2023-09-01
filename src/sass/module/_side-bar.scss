@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.side-bar__items {
+.side-bar {
   padding: 0 rem(25);
 
   @include mq("md") {

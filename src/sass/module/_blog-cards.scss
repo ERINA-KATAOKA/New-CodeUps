@@ -15,7 +15,10 @@
 }
 
 .blog-cards.blog-cards--main {
+  padding: 0 rem(6);
+
   @include mq("md") {
+    padding: 0;
     grid-template-columns: repeat(2, 1fr);
   }
 }

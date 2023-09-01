@@ -9,3 +9,22 @@
   }
 }
 
+.page-information__card {
+  display: none;
+}
+
+.page-information__card.is-active {
+  display: block;
+  animation-name: displayAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -18,16 +18,17 @@
   opacity: 1;
 }
 
-.modal__img {
+.modal__img img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 100%;
-  object-fit: cover;
+  height: 90%;
+  object-fit: contain;
 
   @include mq("md") {
-    width: 63.88888%;
+    width: 90%;
     aspect-ratio: 920 / 586;
   }
 }

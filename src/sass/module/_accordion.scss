@@ -1,10 +1,5 @@
 @use "global" as *;
 
-.accordion__items {
-  max-width: rem(700);
-  margin: 0 auto;
-}
-
 .accordion__item:not(:first-child) {
   margin-top: rem(40);
 }
@@ -58,7 +53,6 @@
 }
 
 .accordion__content {
-  display: none;
   width: 100%;
   padding: rem(22) rem(16);
   border: rem(1) solid $accent-color;

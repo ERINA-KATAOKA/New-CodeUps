@@ -39,7 +39,7 @@
   pointer-events: none;
 }
 
-.information-tab__item span {
+.information-tab__item a {
 
   @include mq("md") {
     position: relative;
@@ -47,7 +47,7 @@
   }
 }
 
-.information-tab__item span::before {
+.information-tab__item a::before {
 
   @include mq("md") {
     content: "";
@@ -64,40 +64,40 @@
   }
 }
 
-.information-tab__item:nth-child(1) span::before {
+.information-tab__item:nth-child(1) a::before {
 
   @include mq("md") {
     background-image: url(../images/common/icon1-green.png);
   }
 }
 
-.information-tab__item:nth-child(2) span::before {
+.information-tab__item:nth-child(2) a::before {
 
   @include mq("md") {
     background-image: url(../images/common/icon2-green.png);
   }
 }
 
-.information-tab__item:nth-child(3) span::before {
+.information-tab__item:nth-child(3) a::before {
 
   @include mq("md") {
     background-image: url(../images/common/icon3-green.png);
   }
 }
 
-.information-tab__item:nth-child(1).current span::before {
+.information-tab__item:nth-child(1).current a::before {
 
   @include mq("md") {
     background-image: url(../images/common/icon1-white.png);
   }
 }
-.information-tab__item:nth-child(2).current span::before {
+.information-tab__item:nth-child(2).current a::before {
 
   @include mq("md") {
     background-image: url(../images/common/icon2-white.png);
   }
 }
-.information-tab__item:nth-child(3).current span::before {
+.information-tab__item:nth-child(3).current a::before {
 
   @include mq("md") {
     background-image: url(../images/common/icon3-white.png);

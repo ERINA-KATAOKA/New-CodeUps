@@ -14,7 +14,7 @@
   font-size: rem(24);
   font-weight: $medium;
   border-bottom: rem(1) solid $accent-color;
-  
+
   @include mq("md") {
     padding-bottom: 0;
 		font-size: rem(32);
@@ -22,31 +22,39 @@
   }
 }
 
-.blog-single__img {
+.blog-single__img img,
+.blog-single__body img {
   aspect-ratio: 345 / 231;
   object-fit: cover;
 
   @include mq("md") {
-		aspect-ratio: 706 / 468;
+    aspect-ratio: 706 / 468;
   }
 }
 
-.blog-single__text {
+.blog-single__img,
+.blog-single__body img,
+.blog-single__body p,
+.blog-single__body ul {
+  margin-top: rem(40);
+}
+
+.blog-single__body p {
   font-size: rem(16);
   font-weight: $regular;
   line-height: calc(24 / 16);
 }
 
-.blog-single__list-item:not(:first-child) {
+.blog-single__body li:not(:first-child) {
   margin-top: rem(4);
 }
 
-.blog-single__list-item {
+.blog-single__body li {
   display: flex;
   align-items: center;
 }
 
-.blog-single__list-item::before {
+.blog-single__body li::before {
   content: '';
   margin-right: rem(9);
   width: rem(18);

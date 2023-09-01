@@ -3,16 +3,24 @@
 .page-mv {
   position: relative;
   width: 100%;
-}
-
-.page-mv__img{
-  width: 100%;
-  aspect-ratio: 375 / 460;
-  object-fit: cover;
+  height: rem(460);
 
   @include mq("md") {
-		aspect-ratio: 1440 / 548;
+		height: rem(548);
   }
+}
+
+.page-mv__inner,
+.page-mv__img {
+  width: 100%;
+  height: inherit;
+}
+
+.page-mv__img img {
+  width: 100%;
+  height: inherit;
+  object-position: center;
+  object-fit: cover;
 }
 
 .page-mv__title-wrapper {

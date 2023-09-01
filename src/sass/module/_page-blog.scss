@@ -1,11 +1,19 @@
 @use "global" as *;
 
-.layout-body {
+.page-blog__body {
   display: grid;
   grid-template-columns: 1fr;
 
   @include mq("md") {
 		grid-template-columns: 1fr .41643fr;
     gap: rem(80);
+  }
+}
+
+.page-blog__side {
+  margin-top: rem(80);
+
+  @include mq("md") {
+		margin-top: 0;
   }
 }
