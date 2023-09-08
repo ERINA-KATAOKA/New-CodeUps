@@ -60,7 +60,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    transition: background-img .3s;
+    transition: background-imag .3s;
   }
 }
 
@@ -68,6 +68,7 @@
 
   @include mq("md") {
     background-image: url(../images/common/icon1-green.png);
+    transition: background-image .3s;
   }
 }
 
@@ -75,6 +76,7 @@
 
   @include mq("md") {
     background-image: url(../images/common/icon2-green.png);
+    transition: background-image .3s;
   }
 }
 
@@ -82,6 +84,7 @@
 
   @include mq("md") {
     background-image: url(../images/common/icon3-green.png);
+    transition: background-image .3s;
   }
 }
 
@@ -106,7 +109,18 @@
 
 @media(hover: hover) {
   .information-tab__item:hover:not(.current) {
-    opacity: .7;
+    color: $white;
+    background-color: $accent-color;
+  }
+
+  .information-tab__item:nth-child(1):hover:not(.current) a::before {
+    background-image: url(../images/common/icon1-white.png);
+  }
+  .information-tab__item:nth-child(2):hover:not(.current) a::before {
+    background-image: url(../images/common/icon2-white.png);
+  }
+  .information-tab__item:nth-child(3):hover:not(.current) a::before {
+    background-image: url(../images/common/icon3-white.png);
   }
 }
 

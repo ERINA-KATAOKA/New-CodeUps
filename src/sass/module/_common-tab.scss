@@ -26,7 +26,7 @@
   color: $accent-color;
   background-color: $white;
   border: rem(1) solid $accent-color;
-  transition: opacity .3s;
+  transition: color .3s, background-color .3s;
 }
 
 .common-tab__item.current {
@@ -41,6 +41,7 @@
 
 @media(hover: hover) {
   .common-tab__item:hover:not(.current) {
-    opacity: .7;
+    color: $white;
+    background-color: $accent-color;
   }
 }

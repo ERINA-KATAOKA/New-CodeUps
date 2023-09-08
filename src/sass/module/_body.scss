@@ -1,0 +1,10 @@
+@use "global" as *;
+
+body.fade-in {
+  opacity: 0; /* 初期状態: 透明 */
+  transition: opacity .7s ease; /* トランジションの設定 */
+}
+
+body.fade-in.is-active {
+  opacity: 1; /* アニメーション後のスタイル: 不透明 */
+}
